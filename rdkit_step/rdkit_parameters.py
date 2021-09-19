@@ -78,14 +78,64 @@ class RdkitParameters(seamm.Parameters):
     """
 
     parameters = {
-        "time": {
-            "default": 100.0,
-            "kind": "float",
-            "default_units": "ps",
-            "enumeration": tuple(),
-            "format_string": ".1f",
-            "description": "Simulation time:",
-            "help_text": ("The time to simulate in the dynamics run."),
+        "desc3d": {
+            "default": None,
+            "kind": "string",
+            "default_units": None,
+            "enumeration": (
+                "Asphericity",
+                "Eccentricity",
+                "InertialShapeFactor",
+                "NPR1",
+                "NPR2",
+                "PMI1",
+                "PMI2",
+                "PMI3",
+                "RadiusOfGyration",
+                "SpherocityIndex",
+            ),
+            "format_string": "",
+            "description": "3D Descriptors",
+            "help_text": (
+                "A list of 3-dimensional descriptors for embedding input"
+                "data on molecular structure."
+            ),
+        },
+        "desc2d": {
+            "default": None,
+            "kind": "string",
+            "default_units": None,
+            "enumeration": ("BalabanJ", "BertzCT"),
+            "format_string": "",
+            "description": "2D Descriptors",
+            "help_text": (
+                "A list of 2-dimensional descriptors for embedding input "
+                "data on molecular structure."
+            ),
+        },
+        "fps": {
+            "default": None,
+            "kind": "string",
+            "default_units": None,
+            "enumeration": ("RDKFingerprint", "Torsions", "Pairs"),
+            "format_string": "",
+            "description": "Fingerprints",
+            "help_text": (
+                "A list of fingerprints for embedding input "
+                "data on molecular structure."
+            ),
+        },
+        "create tables": {
+            "default": "yes",
+            "kind": "boolean",
+            "default_units": None,
+            "enumeration": ("yes", "no"),
+            "format_string": "",
+            "description": "Create tables as needed:",
+            "help_text": (
+                "Whether to create tables as needed for "
+                "results being saved into tables."
+            ),
         },
     }
 
@@ -109,6 +159,4 @@ class RdkitParameters(seamm.Parameters):
 
         logger.debug("RdkitParameters.__init__")
 
-        super().__init__(
-            defaults={**RdkitParameters.parameters, **defaults}, data=data
-        )
+        super().__init__(defaults={**RdkitParameters.parameters, **defaults}, data=data)

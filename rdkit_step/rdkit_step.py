@@ -29,7 +29,7 @@ class RdkitStep(object):
 
     my_description = {
         "description": "An interface for RDKit",
-        "group": "Simulations",
+        "group": "Featurizers",
         "name": "RDKit",
     }
 

@@ -13,6 +13,9 @@ from rdkit_step.rdkit_parameters import RdkitParameters  # noqa: F401, E501
 from rdkit_step.rdkit_step import RdkitStep  # noqa: F401, E501
 from rdkit_step.tk_rdkit import TkRdkit  # noqa: F401, E501
 
+# The metadata
+from rdkit_step.metadata import properties  # noqa: F401
+
 # Handle versioneer
 from ._version import get_versions
 

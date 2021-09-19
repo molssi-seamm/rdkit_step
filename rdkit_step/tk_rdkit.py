@@ -94,28 +94,18 @@ class TkRdkit(seamm.TkNode):
             w=w,
             h=h,
         )
+        self.create_dialog()
 
-    def create_dialog(self):
-        """
-        Create the dialog. A set of widgets will be chosen by default
-        based on what is specified in the RDKit_parameters
-        module.
+    def create_dialog(self, title="Specify the RDKit featurizers"):
+        """Create the dialog!"""
 
-        Parameters
-        ----------
-        None
+        self.logger.debug("Creating the dialog")
 
-        Returns
-        -------
-        None
+        frame = super().create_dialog(
+            title="RDKit", widget="notebook", results_tab=True
+        )
 
-        See Also
-        --------
-        TkRdkit.reset_dialog
-        """
-
-        frame = super().create_dialog(title="RDKit")
-        # Shortcut for parameters
+        # Create all the widgets
         P = self.node.parameters
 
         # Then create the widgets
@@ -124,6 +114,10 @@ class TkRdkit(seamm.TkNode):
 
         # and lay them out
         self.reset_dialog()
+
+        # self.setup_results(rdkit_step.properties)
+
+        self.logger.debug("Finished creating the dialog")
 
     def reset_dialog(self, widget=None):
         """Layout the widgets in the dialog.
@@ -243,14 +237,6 @@ class TkRdkit(seamm.TkNode):
             raise RuntimeError(f"Don't recognize dialog result '{result}'")
 
         self.dialog.deactivate(result)
-        # Shortcut for parameters
-        P = self.node.parameters
-
-        # Get the values for all the widgets. This may be overkill, but
-        # it is easy! You can sort out what it all means later, or
-        # be a bit more selective.
-        for key in P:
-            P[key].set_from_widget()
 
     def handle_help(self):
         """Shows the help to the user when click on help button.
