@@ -120,17 +120,17 @@ class Rdkit(seamm.Node):
         return self.header + "\n" + __(text, **P, indent=4 * " ").__str__()
 
     def run(self):
-        """Run a RDKit step.
+        """Run a RDKit"""
+        system, configuration = self.get_system_configuration(None)
+        n_atoms = configuration.n_atoms
+        if n_atoms == 0:
+            self.logger.error("RDKit run(): there is no structure!")
+            raise RuntimeError("RDKit run(): there is no structure!")
 
-        Parameters
-        ----------
-        None
+        # Print out header to the main output
+        printer.important(self.header)
+        printer.important("")
 
-        Returns
-        -------
-        seamm.Node
-            The next node object in the flowchart.
-        """
         next_node = super().run(printer)
         # Get the values of the parameters, dereferencing any variables
         P = self.parameters.current_values_to_dict(
