@@ -146,13 +146,7 @@ class TkRdkit(seamm.TkNode):
             if key == "features":
                 self[key] = P[key].widget(tree)
 
-        # tree.set(P)
-        # print(P)
-        # and lay them out
-        self.edit()
-
-        self.tree_state = self["tree"].get()
-
+        self["tree"].set(P["features"].value)
         self.reset_dialog()
 
         # self.setup_results(rdkit_step.properties)
@@ -244,6 +238,8 @@ class TkRdkit(seamm.TkNode):
         if self.dialog is None:
             self.create_dialog()
 
+        self.tree_state = self["tree"].get()
+
         self.dialog.activate(geometry="centerscreenfirst")
 
     def handle_dialog(self, result):
@@ -263,11 +259,6 @@ class TkRdkit(seamm.TkNode):
         -------
         None
         """
-
-        if result is None:
-            self.dialog.deactivate(result)
-            return
-
         if result == "Help":
             # display help!!!
             return
@@ -275,11 +266,11 @@ class TkRdkit(seamm.TkNode):
         if result == "OK":
             # self.dialog.deactivate(result)
             P = self.node.parameters
-            P["features"] = self["tree"].get("", as_dict=True)
-            self.dialog.deactivate(result)
-        elif result == "Cancel":
+            P["features"].value = self["tree"].get("", as_dict=False)
+        else:
             self["tree"].set(self.tree_state)
-            self.dialog.deactivate(result)
+        
+        self.dialog.deactivate(result)
 
     def handle_help(self):
         """Shows the help to the user when click on help button.
