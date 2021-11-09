@@ -2,78 +2,78 @@
 """
 
 properties = {
-    "desc3d": {
-        "Asphericity" : {
-            "name" : "asphericity",
+    "3D-Descriptors": {
+        "Asphericity": {
+            "name": "asphericity",
             "dimensionality": "scalar",
             "type": "float",
             "units": "",
-            "description": "molecular asphericity",
+            "description": "Molecular asphericity",
         },
-        "Eccentricity" : {
-            "name" : "eccentricity",
+        "Eccentricity": {
+            "name": "eccentricity",
             "dimensionality": "scalar",
             "type": "float",
             "units": "",
-            "description": "molecular eccentricity",
+            "description": "Molecular eccentricity",
         },
-        "InertialShapeFactor" : {
-            "name" : "inertial_shape_factor",
+        "InertialShapeFactor": {
+            "name": "inertial_shape_factor",
             "dimensionality": "scalar",
             "type": "float",
             "units": "",
-            "description": "inertial shape factor",
+            "description": "Inertial shape factor",
         },
-        "NPR1" : {
-            "name" : "npr1",
+        "NPR1": {
+            "name": "npr1",
             "dimensionality": "scalar",
             "type": "float",
             "units": "",
-            "description": "Normalized principal moments ratio 1 (=I1/I3)"
+            "description": "Normalized principal moments ratio 1 (=I1/I3)",
         },
-        "NPR2" : {
-            "name" : "npr2",
+        "NPR2": {
+            "name": "npr2",
             "dimensionality": "scalar",
             "type": "float",
             "units": "",
-            "description": "Normalized principal moments ratio 2 (=I2/I3)"
+            "description": "Normalized principal moments ratio 2 (=I2/I3)",
         },
     },
-    "desc2d" : {
-        "MaxEStateIndex" : {
-            "name" : "max_e_state_index",
+    "2D-Descriptors": {
+        "MaxEStateIndex": {
+            "name": "max_e_state_index",
             "dimensionality": "scalar",
             "type": "float",
             "units": "",
-            "description": "maximum value of the electrotopological state atom index"
+            "description": "Maximum value of the electrotopological state atom index",
         },
-        "MinEStateIndex" : {
-            "name" : "min_e_state_index",
+        "MinEStateIndex": {
+            "name": "min_e_state_index",
             "dimensionality": "scalar",
             "type": "float",
             "units": "",
-            "description": "minimum value of the electrotopological state atom index"
+            "description": "Minimum value of the electrotopological state atom index",
         },
-        "MaxAbsEStateIndex" : {
-            "name" : "max_abs_e_state_index",
+        "MaxAbsEStateIndex": {
+            "name": "max_abs_e_state_index",
             "dimensionality": "scalar",
             "type": "float",
             "units": "",
-            "description": "maximum absolute value of the electrotopological state atom index"
+            "description": "Maximum absolute value of the electrotopological state atom index",
         },
-        "MinAbsEStateIndex" : {
-            "name" : "min_abs_e_state_index",
+        "MinAbsEStateIndex": {
+            "name": "min_abs_e_state_index",
             "dimensionality": "scalar",
             "type": "float",
             "units": "",
-            "description": "minimum absolute value of the electrotopological state atom index"
+            "description": "Minimum absolute value of the electrotopological state atom index",
         },
-        "MolWt" : {
-            "name" : "mol_wt",
+        "MolWt": {
+            "name": "mol_wt",
             "dimensionality": "scalar",
             "type": "float",
             "units": "a.u.",
-            "description": "average molecular weight"
+            "description": "Average molecular weight",
         },
-    }
+    },
 }

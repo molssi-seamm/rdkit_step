@@ -9,6 +9,7 @@ import rdkit_step  # noqa: F401
 import seamm
 from seamm_util import ureg, Q_, units_class  # noqa: F401
 import seamm_widgets as sw
+from rdkit_step.metadata import properties
 
 
 class TkRdkit(seamm.TkNode):
@@ -84,6 +85,7 @@ class TkRdkit(seamm.TkNode):
         None
         """
         self.dialog = None
+        self.tree_state = None
 
         super().__init__(
             tk_flowchart=tk_flowchart,
@@ -96,23 +98,61 @@ class TkRdkit(seamm.TkNode):
         )
         self.create_dialog()
 
+    def load_dict(self, tree, parent, metadata):
+        """Custom code to load the dictionary in the test.
+        NB. the 'state=False' argument prevents insert from working out the
+        state of the parent nodes every time an item is inserted. This is done
+        at the end with 'tree.state()'
+        """
+        for key, value in metadata.items():
+            # Get any data in the columns
+            tree.insert(
+                parent,
+                "end",
+                iid=key,
+                text=key,
+                state=False,
+                open="open" in value and value["open"],
+                values=[value["description"] if "description" in value else ""],
+            )
+            # Recurse if a branch node
+            if "name" not in value:
+                self.load_dict(tree, key, value)
+
+        # Set the state of intermediate nodes
+        tree.state()
+
     def create_dialog(self, title="Specify the RDKit featurizers"):
         """Create the dialog!"""
 
         self.logger.debug("Creating the dialog")
 
-        frame = super().create_dialog(
-            title="RDKit", widget="notebook", results_tab=True
+        frame = super().create_dialog(title="RDKit", widget="frame", results_tab=False)
+
+        tree = self["tree"] = sw.CheckTree(
+            frame, labeltext="Features", labelpos="w", columns=["Description"]
         )
+        tree.grid(row=0, column=0, columnspan=2, sticky="nesw")
+        frame.rowconfigure(0, weight=1)
+        frame.columnconfigure(0, weight=1)
+        frame.columnconfigure(1, weight=1)
+
+        self.load_dict(tree, "", properties)
 
         # Create all the widgets
         P = self.node.parameters
-
-        # Then create the widgets
+        # # Then create the widgets
         for key in P:
-            self[key] = P[key].widget(frame)
+            if key == "features":
+                self[key] = P[key].widget(tree)
 
+        # tree.set(P)
+        # print(P)
         # and lay them out
+        self.edit()
+
+        self.tree_state = self["tree"].get()
+
         self.reset_dialog()
 
         # self.setup_results(rdkit_step.properties)
@@ -142,7 +182,7 @@ class TkRdkit(seamm.TkNode):
         --------
         TkRdkit.create_dialog
         """
-
+        return
         # Remove any widgets previously packed
         frame = self["frame"]
         for slave in frame.grid_slaves():
@@ -224,7 +264,7 @@ class TkRdkit(seamm.TkNode):
         None
         """
 
-        if result is None or result == "Cancel":
+        if result is None:
             self.dialog.deactivate(result)
             return
 
@@ -232,11 +272,14 @@ class TkRdkit(seamm.TkNode):
             # display help!!!
             return
 
-        if result != "OK":
+        if result == "OK":
+            # self.dialog.deactivate(result)
+            P = self.node.parameters
+            P["features"] = self["tree"].get("", as_dict=True)
             self.dialog.deactivate(result)
-            raise RuntimeError(f"Don't recognize dialog result '{result}'")
-
-        self.dialog.deactivate(result)
+        elif result == "Cancel":
+            self["tree"].set(self.tree_state)
+            self.dialog.deactivate(result)
 
     def handle_help(self):
         """Shows the help to the user when click on help button.
