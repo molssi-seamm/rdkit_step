@@ -4,12 +4,13 @@
 
 import pprint  # noqa: F401
 import tkinter as tk
+import tkinter.ttk as ttk
 
 import rdkit_step  # noqa: F401
 import seamm
 from seamm_util import ureg, Q_, units_class  # noqa: F401
 import seamm_widgets as sw
-from rdkit_step.metadata import properties
+import Pmw
 
 
 class TkRdkit(seamm.TkNode):
@@ -121,98 +122,70 @@ class TkRdkit(seamm.TkNode):
         # Set the state of intermediate nodes
         tree.state()
 
-    def load_dict(self, tree, parent, metadata):
-        """Custom code to load the dictionary in the test.
-        NB. the 'state=False' argument prevents insert from working out the
-        state of the parent nodes every time an item is inserted. This is done
-        at the end with 'tree.state()'
-        """
-        for key, value in metadata.items():
-            # Get any data in the columns
-            tree.insert(
-                parent,
-                "end",
-                iid=key,
-                text=key,
-                state=False,
-                open="open" in value and value["open"],
-                values=[value["description"] if "description" in value else ""],
-            )
-            # Recurse if a branch node
-            if "name" not in value:
-                self.load_dict(tree, key, value)
-
-        # Set the state of intermediate nodes
-        tree.state()
-
     def create_dialog(self, title="Specify the RDKit featurizers"):
         """Create the dialog!"""
 
         self.logger.debug("Creating the dialog")
 
-        frame = super().create_dialog(title="RDKit", widget="frame", results_tab=False)
+        self.dialog = Pmw.Dialog(
+            self.toplevel,
+            buttons=("OK", "Reset", "Clear", "Cancel"),
+            master=self.toplevel,
+            title=title,
+            command=self.handle_dialog,
+        )
+        self.dialog.withdraw()
+
+        frame = ttk.Frame(self.dialog.interior())
+        frame.pack(expand=tk.YES, fill=tk.BOTH)
+        self["frame"] = frame
 
         # Create all the widgets
         P = self.node.parameters
 
-        tree = self["tree"] = sw.CheckTree(
-            frame, labeltext="Features", labelpos="w", columns=["Description"]
-        )
-        tree.grid(row=0, column=0, columnspan=2, sticky="nesw")
-        frame.rowconfigure(0, weight=1)
-        frame.columnconfigure(0, weight=1)
-        frame.columnconfigure(1, weight=1)
+        for key in P:
+            if key not in ("results", "extra keywords", "create tables", "tree"):
+                self[key] = P[key].widget(frame)
 
-        self.load_dict(tree, "", properties)
+        tree = self["tree"] = sw.CheckTree(frame, columns=["Descriptions"])
+        tree.heading("#0", text="Features")
+
+        for widget in ("where",):
+            w = self[widget]
+            w.bind("<<ComboboxSelected>>", self.reset_dialog)
+            w.bind("<Return>", self.reset_dialog)
+            w.bind("<FocusOut>", self.reset_dialog)
+
+        self.load_dict(tree, "", rdkit_step.properties)
 
         self["tree"].selection_set(P["features"].value)
+
         self.reset_dialog()
 
         self.logger.debug("Finished creating the dialog")
 
     def reset_dialog(self, widget=None):
-        """Layout the widgets in the dialog.
-
-        The widgets are chosen by default from the information in
-        RDKit_parameter.
-
-        This function simply lays them out row by row with
-        aligned labels. You may wish a more complicated layout that
-        is controlled by values of some of the control parameters.
-        If so, edit or override this method
-
-        Parameters
-        ----------
-        widget : Tk Widget = None
-
-        Returns
-        -------
-        None
-
-        See Also
-        --------
-        TkRdkit.create_dialog
-        """
-        return
-        # Remove any widgets previously packed
+        """Resets the dialog to the its last state"""
         frame = self["frame"]
         for slave in frame.grid_slaves():
             slave.grid_forget()
 
-        # Shortcut for parameters
-        P = self.node.parameters
+        where = self["where"].get()
 
-        # keep track of the row in a variable, so that the layout is flexible
-        # if e.g. rows are skipped to control such as "method" here
         row = 0
-        widgets = []
-        for key in P:
-            self[key].grid(row=row, column=0, sticky=tk.EW)
-            widgets.append(self[key])
-            row += 1
+        self["tree"].grid(row=row, column=0, columnspan=3, sticky="nesw")
+        row += 1
+        self["where"].grid(row=row, column=0, columnspan=2, sticky="ew")
+        row += 1
 
-        # Align the labels
-        sw.align_labels(widgets)
+        if where in ("Table", "Both"):
+            self["table"].grid(row=row, column=1, sticky="ew")
+
+        frame.rowconfigure(0, weight=1)
+        frame.columnconfigure(0, minsize=50)
+        frame.columnconfigure(2, weight=1)
+
+        return
 
     def right_click(self, event):
         """
@@ -279,15 +252,19 @@ class TkRdkit(seamm.TkNode):
         if result == "Help":
             # display help!!!
             return
+        elif result == "Reset":
+            self["tree"].selection_set(self.tree_state)
+            return
+        elif result == "Clear":
+            self["tree"].selection_clear("")
+            return
+        super().handle_dialog(result)
 
+        P = self.node.parameters
         if result == "OK":
-            # self.dialog.deactivate(result)
-            P = self.node.parameters
             P["features"].value = self["tree"].get("", as_dict=False)
         else:
             self["tree"].selection_set(self.tree_state)
-
-        self.dialog.deactivate(result)
 
     def handle_help(self):
         """Shows the help to the user when click on help button.
