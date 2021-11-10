@@ -59,14 +59,18 @@ properties = {
             "dimensionality": "scalar",
             "type": "float",
             "units": "",
-            "description": "Maximum absolute value of the electrotopological state atom index",
+            "description": (
+                "Maximum absolute value of the electrotopological state atom index"
+            ),
         },
         "MinAbsEStateIndex": {
             "name": "min_abs_e_state_index",
             "dimensionality": "scalar",
             "type": "float",
             "units": "",
-            "description": "Minimum absolute value of the electrotopological state atom index",
+            "description": (
+                "Minimum absolute value of the electrotopological state atom index"
+            ),
         },
         "MolWt": {
             "name": "mol_wt",

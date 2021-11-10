@@ -79,8 +79,8 @@ class RdkitParameters(seamm.Parameters):
 
     parameters = {
         "features": {
-            "default": None,
-            "kind": "string",
+            "default": [],
+            "kind": "list",
             "default_units": None,
             "enumeration": tuple(),
             "format_string": "",

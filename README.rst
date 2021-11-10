@@ -30,7 +30,7 @@ SEAMM RDKit Plug-in
    :target: https://pypi.python.org/pypi/rdkit_step
    :alt: PyPi VERSION
 
-A SEAMM plug-in for A SEAMM plug-in for RDKit
+A SEAMM plug-in for RDKit
 
 * Free software: BSD-3-Clause
 * Documentation: https://molssi-seamm.github.io/rdkit_step/index.html

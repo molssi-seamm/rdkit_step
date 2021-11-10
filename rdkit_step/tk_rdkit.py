@@ -96,7 +96,30 @@ class TkRdkit(seamm.TkNode):
             w=w,
             h=h,
         )
-        self.create_dialog()
+
+    def load_dict(self, tree, parent, metadata):
+        """Custom code to load the dictionary in the test.
+        NB. the 'state=False' argument prevents insert from working out the
+        state of the parent nodes every time an item is inserted. This is done
+        at the end with 'tree.state()'
+        """
+        for key, value in metadata.items():
+            # Get any data in the columns
+            tree.insert(
+                parent,
+                "end",
+                iid=key,
+                text=key,
+                state=False,
+                open="open" in value and value["open"],
+                values=[value["description"] if "description" in value else ""],
+            )
+            # Recurse if a branch node
+            if "name" not in value:
+                self.load_dict(tree, key, value)
+
+        # Set the state of intermediate nodes
+        tree.state()
 
     def load_dict(self, tree, parent, metadata):
         """Custom code to load the dictionary in the test.
@@ -129,6 +152,9 @@ class TkRdkit(seamm.TkNode):
 
         frame = super().create_dialog(title="RDKit", widget="frame", results_tab=False)
 
+        # Create all the widgets
+        P = self.node.parameters
+
         tree = self["tree"] = sw.CheckTree(
             frame, labeltext="Features", labelpos="w", columns=["Description"]
         )
@@ -139,17 +165,8 @@ class TkRdkit(seamm.TkNode):
 
         self.load_dict(tree, "", properties)
 
-        # Create all the widgets
-        P = self.node.parameters
-        # # Then create the widgets
-        for key in P:
-            if key == "features":
-                self[key] = P[key].widget(tree)
-
-        self["tree"].set(P["features"].value)
+        self["tree"].selection_set(P["features"].value)
         self.reset_dialog()
-
-        # self.setup_results(rdkit_step.properties)
 
         self.logger.debug("Finished creating the dialog")
 
@@ -268,8 +285,8 @@ class TkRdkit(seamm.TkNode):
             P = self.node.parameters
             P["features"].value = self["tree"].get("", as_dict=False)
         else:
-            self["tree"].set(self.tree_state)
-        
+            self["tree"].selection_set(self.tree_state)
+
         self.dialog.deactivate(result)
 
     def handle_help(self):
