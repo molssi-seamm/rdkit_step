@@ -87,6 +87,24 @@ class RdkitParameters(seamm.Parameters):
             "description": "RDKit Descriptors",
             "help_text": ("The list of RDKit descriptors"),
         },
+        "where": {
+            "default": "Database",
+            "kind": "string",
+            "default_units": "",
+            "enumeration": ("Database", "Table", "Both"),
+            "format_string": "",
+            "description": "Where to store the features:",
+            "help_text": "Where to store the features",
+        },
+        "table": {
+            "default": "table1",
+            "kind": "string",
+            "default_units": "",
+            "enumeration": None,
+            "format_string": "",
+            "description": "Table to use:",
+            "help_text": "Table to store the features",
+        },
     }
 
     def __init__(self, defaults={}, data=None):

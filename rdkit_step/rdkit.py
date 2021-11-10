@@ -143,6 +143,8 @@ class Rdkit(seamm.Node):
         # Temporary code just to print the parameters. You will need to change
         # this!
         for key in P:
+            if key == "tree":
+                continue
             print("{:>15s} = {}".format(key, P[key]))
             printer.normal(
                 __(
@@ -154,7 +156,7 @@ class Rdkit(seamm.Node):
                     dedent=False,
                 )
             )
-
+        pprint.pprint(self.parameters["features"].value)
         # Analyze the results
         self.analyze()
 
