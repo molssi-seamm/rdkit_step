@@ -6,6 +6,16 @@
 import logging
 import pprint  # noqa: F401
 
+import numpy as np
+
+try:
+    from rdkit.Chem import Descriptors, Descriptors3D
+except ModuleNotFoundError:
+    print(
+        "Please install rdkit using conda:\n" "     conda install -c conda-forge rdkit"
+    )
+    raise
+
 import rdkit_step
 import seamm
 from seamm_util import ureg, Q_  # noqa: F401
@@ -135,34 +145,52 @@ class Rdkit(seamm.Node):
             context=seamm.flowchart_variables._data
         )
 
+        in_db = P["where"] in ("Database", "Both")
+        if in_db:
+            properties = configuration.properties
+        in_table = P["where"] in ("Table", "Both")
+        if in_table:
+            table_handle = self.get_variable(P["table"])
+            table = table_handle["table"]
+
         # Print what we are doing
         printer.important(__(self.description_text(P), indent=self.indent))
 
-        # Temporary code just to print the parameters. You will need to change
-        # this!
-        for key in P:
-            if key == "tree":
-                continue
-            print("{:>15s} = {}".format(key, P[key]))
-            printer.normal(
-                __(
-                    "{key:>15s} = {value}",
-                    key=key,
-                    value=P[key],
-                    indent=4 * " ",
-                    wrap=False,
-                    dedent=False,
-                )
-            )
-        rdkmol = configuration.to_RDKMol()
+        mol = configuration.to_RDKMol()
 
-        # pprint.pprint(self.parameters["features"].value, "\n")
-        # Analyze the results
-        # self.analyze()
-
-        # Add other citations here or in the appropriate place in the code.
-        # Add the bibtex to data/references.bib, and add a self.reference.cite
-        # similar to the above to actually add the citation to the references.
+        for feature in self.parameters["features"].value:
+            if feature in Descriptors.__dict__:
+                value = Descriptors.__dict__[feature](mol)
+                if in_table:
+                    if feature not in table.columns:
+                        table_handle["defaults"][feature] = np.nan
+                        table[feature] = np.nan
+                    row_index = table_handle["current index"]
+                    table.at[row_index, feature] = value
+                if in_db:
+                    key = "rdkit." + feature
+                    if not properties.exists(key):
+                        properties.add(
+                            key, description="RDKit 2-D descriptor " + feature
+                        )
+                    properties.put(key, value)
+            elif feature in Descriptors3D.__dict__:
+                value = Descriptors3D.__dict__[feature](mol)
+                if in_table:
+                    if feature not in table.columns:
+                        table_handle["defaults"][feature] = np.nan
+                        table[feature] = np.nan
+                    row_index = table_handle["current index"]
+                    table.at[row_index, feature] = value
+                if in_db:
+                    key = "rdkit." + feature
+                    if not properties.exists(key):
+                        properties.add(
+                            key, description="RDKit 3-D descriptor " + feature
+                        )
+                    properties.put(key, value)
+            else:
+                print(f"     unable to handle feature '{feature}'")
 
         return next_node
 
