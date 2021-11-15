@@ -122,15 +122,13 @@ class Rdkit(seamm.Node):
         if not P:
             P = self.parameters.values_to_dict()
 
-        text = (
-            "Please replace this with a short summary of the "
-            "RDKit step, including key parameters."
-        )
+        text = "Calculating selected RDKit descriptors from configuration(s)."
 
         return self.header + "\n" + __(text, **P, indent=4 * " ").__str__()
 
     def run(self):
         """Run a RDKit"""
+
         system, configuration = self.get_system_configuration(None)
         n_atoms = configuration.n_atoms
         if n_atoms == 0:
