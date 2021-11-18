@@ -113,7 +113,10 @@ properties = {
             "dimensionality": "scalar",
             "type": "int",
             "units": "",
-            "description": "The number of radical electrons in the molecule (regardless of their spin)",
+            "description": (
+                "The number of radical electrons in the molecule"
+                "(regardless of their spin)"
+            ),
         },
         "MaxPartialCharge": {
             "name": "max_partial_charge",
@@ -194,13 +197,6 @@ properties = {
         },
         "BCUT2D_LOGPHI": {
             "name": "bcut2d_logphi",
-            "dimensionality": "scalar",
-            "type": "float",
-            "units": "",
-            "description": "",
-        },
-        "BCUT2D_LOGPLOW": {
-            "name": "bcut2d_logplow",
             "dimensionality": "scalar",
             "type": "float",
             "units": "",
@@ -339,7 +335,8 @@ properties = {
             "units": "",
             "description": (
                 "the information content of the coefficients of the characteristic"
-                "polynomial of the adjacency matrix of a hydrogen-suppressed graph of a molecule"
+                "polynomial of the adjacency matrix of a hydrogen-suppressed "
+                "graph of a molecule"
             ),
         },
         "Kappa1": {
@@ -481,13 +478,6 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE MR VSA Descriptor-10 ( 4.00 <= x < inf)",
-        },
-        "SMR_VSA1": {
-            "name": "smr_vsa1",
-            "dimensionality": "scalar",
-            "type": "float",
-            "units": "",
-            "description": "",
         },
         "SMR_VSA2": {
             "name": "smr_vsa2",
@@ -816,21 +806,30 @@ properties = {
             "dimensionality": "scalar",
             "type": "int",
             "units": "",
-            "description": "Number of aliphatic (containing at least one non-aromatic bond) carbocycles in a molecule",
+            "description": (
+                "Number of aliphatic (containing at least "
+                "one non-aromatic bond) carbocycles in a molecule"
+            ),
         },
         "NumAliphaticHeterocycles": {
             "name": "num_aliphatic_heterocycles",
             "dimensionality": "scalar",
             "type": "int",
             "units": "",
-            "description": "Number of aliphatic (containing at least one non-aromatic bond) heterocycles in a molecule",
+            "description": (
+                "Number of aliphatic (containing "
+                "at least one non-aromatic bond) heterocycles in a molecule"
+            ),
         },
         "NumAliphaticRings": {
             "name": "num_aliphatic_rings",
             "dimensionality": "scalar",
             "type": "int",
             "units": "",
-            "description": "Number of aliphatic (containing at least one non-aromatic bond) rings in a molecule",
+            "description": (
+                "Number of aliphatic (containing "
+                "at least one non-aromatic bond) rings in a molecule"
+            ),
         },
         "NumAromaticCarbocycles": {
             "name": "num_aromatic_carbocycles",
@@ -1068,7 +1067,10 @@ properties = {
             "dimensionality": "scalar",
             "type": "int",
             "units": "",
-            "description": "Number of tert-alicyclic amines (no heteroatoms, not quinine-like bridged N)",
+            "description": (
+                "Number of tert-alicyclic amines (no "
+                "heteroatoms, not quinine-like bridged N)"
+            ),
         },
         "fr_Nhpyrrole": {
             "name": "fr_nhpyrrole",
@@ -1110,7 +1112,9 @@ properties = {
             "dimensionality": "scalar",
             "type": "int",
             "units": "",
-            "description": "Number of allylic oxidation sites excluding steroid dienone",
+            "description": (
+                "Number of allylic oxidation sites " "excluding steroid dienone"
+            ),
         },
         "fr_amide": {
             "name": "fr_amide",
@@ -1292,7 +1296,10 @@ properties = {
             "dimensionality": "scalar",
             "type": "int",
             "units": "",
-            "description": "Number of ketones excluding diaryl, a,b-unsaturated dienones, heteroatom on alpha carbon",
+            "description": (
+                "Number of ketones excluding diaryl, "
+                "a,b-unsaturated dienones, heteroatom on alpha carbon"
+            ),
         },
         "fr_lactam": {
             "name": "fr_lactam",
@@ -1390,7 +1397,10 @@ properties = {
             "dimensionality": "scalar",
             "type": "int",
             "units": "",
-            "description": "Number of phenolic OH excluding ortho intramolecular H-bond substituents",
+            "description": (
+                "Number of phenolic OH excluding ortho "
+                "intramolecular H-bond substituents"
+            ),
         },
         "fr_phos_acid": {
             "name": "fr_phos_acid",
@@ -1509,7 +1519,10 @@ properties = {
             "dimensionality": "scalar",
             "type": "int",
             "units": "",
-            "description": "Number of unbranched alkanes  of at least 4 members (excludes halogenated alkanes)",
+            "description": (
+                "Number of unbranched alkanes of at "
+                "least 4 members (excludes halogenated alkanes)"
+            ),
         },
         "fr_urea": {
             "name": "fr_urea",
