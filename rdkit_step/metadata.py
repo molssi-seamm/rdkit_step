@@ -9,6 +9,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Molecular asphericity",
+            "citations": "",
         },
         "Eccentricity": {
             "name": "eccentricity",
@@ -16,6 +17,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Molecular eccentricity",
+            "citations": "",
         },
         "InertialShapeFactor": {
             "name": "inertial_shape_factor",
@@ -23,6 +25,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Inertial shape factor",
+            "citations": "",
         },
         "NPR1": {
             "name": "npr1",
@@ -30,6 +33,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Normalized principal moments ratio 1 (=I1/I3)",
+            "citations": "",
         },
         "NPR2": {
             "name": "npr2",
@@ -37,6 +41,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Normalized principal moments ratio 2 (=I2/I3)",
+            "citations": "",
         },
     },
     "2D-Descriptors": {
@@ -47,6 +52,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Maximum value of the electrotopological state atom index",
+            "citations": "",
         },
         "MinEStateIndex": {
             "name": "min_e_state_index",
@@ -54,6 +60,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Minimum value of the electrotopological state atom index",
+            "citations": "",
         },
         "MaxAbsEStateIndex": {
             "name": "max_abs_e_state_index",
@@ -61,8 +68,9 @@ properties = {
             "type": "float",
             "units": "",
             "description": (
-                "Maximum absolute value of the electrotopological state atom index"
+                "Maximum absolute value of the electrotopological " "state atom index"
             ),
+            "citations": "",
         },
         "MinAbsEStateIndex": {
             "name": "min_abs_e_state_index",
@@ -70,8 +78,9 @@ properties = {
             "type": "float",
             "units": "",
             "description": (
-                "Minimum absolute value of the electrotopological state atom index"
+                "Minimum absolute value of the electrotopological " "state atom index"
             ),
+            "citations": "",
         },
         "qed": {
             "name": "qed",
@@ -79,6 +88,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Quantitative estimation of drug-likeness",
+            "citations": "",
         },
         "MolWt": {
             "name": "mol_wt",
@@ -86,6 +96,7 @@ properties = {
             "type": "float",
             "units": "a.u.",
             "description": "Average molecular weight",
+            "citations": "",
         },
         "HeavyAtomMolWt": {
             "name": "heavy_atom_mol_wt",
@@ -93,6 +104,7 @@ properties = {
             "type": "float",
             "units": "a.u.",
             "description": "Average molecular weight ignoring hydrogens",
+            "citations": "",
         },
         "ExactMolWt": {
             "name": "exact_mol_wt",
@@ -100,6 +112,7 @@ properties = {
             "type": "float",
             "units": "a.u.",
             "description": "The exact molecular weight",
+            "citations": "",
         },
         "NumValenceElectrons": {
             "name": "num_valence_electrons",
@@ -107,6 +120,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "The number of valence electrons in the molecule",
+            "citations": "",
         },
         "NumRadicalElectrons": {
             "name": "num_radical_electrons",
@@ -114,9 +128,10 @@ properties = {
             "type": "int",
             "units": "",
             "description": (
-                "The number of radical electrons in the molecule"
-                "(regardless of their spin)"
+                "The number of radical electrons in the "
+                "molecule (regardless of their spin)"
             ),
+            "citations": "",
         },
         "MaxPartialCharge": {
             "name": "max_partial_charge",
@@ -124,6 +139,7 @@ properties = {
             "type": "float",
             "units": "a.u.",
             "description": "Maximum partial charge on the molecule",
+            "citations": "",
         },
         "MinPartialCharge": {
             "name": "min_partial_charge",
@@ -131,6 +147,7 @@ properties = {
             "type": "float",
             "units": "a.u.",
             "description": "Minimum partial charge on the molecule",
+            "citations": "",
         },
         "MaxAbsPartialCharge": {
             "name": "max_abs_partial_charge",
@@ -138,6 +155,7 @@ properties = {
             "type": "float",
             "units": "a.u.",
             "description": "Maximum absolute value of partial charge on the molecule",
+            "citations": "",
         },
         "MinAbsPartialCharge": {
             "name": "min_abs_partial_charge",
@@ -145,6 +163,7 @@ properties = {
             "type": "float",
             "units": "a.u.",
             "description": "Minimum absolute value of partial charge on the molecule",
+            "citations": "",
         },
         "FpDensityMorgan1": {
             "name": "fp_density_morgan1",
@@ -152,6 +171,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Morgan-1 density fingerprint",
+            "citations": "",
         },
         "FpDensityMorgan2": {
             "name": "fp_density_morgan2",
@@ -159,6 +179,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Morgan-2 density fingerprint",
+            "citations": "",
         },
         "FpDensityMorgan3": {
             "name": "fp_density_morgan3",
@@ -166,6 +187,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Morgan-3 density fingerprint",
+            "citations": "",
         },
         "BCUT2D_MWHI": {
             "name": "bcut2d_mwhi",
@@ -173,6 +195,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "",
+            "citations": "",
         },
         "BCUT2D_MWLOW": {
             "name": "bcut2d_mwlow",
@@ -180,6 +203,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "",
+            "citations": "",
         },
         "BCUT2D_CHGHI": {
             "name": "bcut2d_chghi",
@@ -187,6 +211,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "",
+            "citations": "",
         },
         "BCUT2D_CHGLO": {
             "name": "bcut2d_chglo",
@@ -194,6 +219,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "",
+            "citations": "",
         },
         "BCUT2D_LOGPHI": {
             "name": "bcut2d_logphi",
@@ -201,6 +227,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "",
+            "citations": "",
         },
         "BCUT2D_LOGPLOW": {
             "name": "bcut2d_logplow",
@@ -208,6 +235,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "",
+            "citations": "",
         },
         "BCUT2D_MRHI": {
             "name": "bcut2d_mrhi",
@@ -215,6 +243,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "",
+            "citations": "",
         },
         "BCUT2D_MRLOW": {
             "name": "bcut2d_mrlow",
@@ -222,6 +251,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "",
+            "citations": "",
         },
         "BalabanJ": {
             "name": "balaban_j",
@@ -229,6 +259,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Balaban's J value for a molecule",
+            "citations": "",
         },
         "BertzCT": {
             "name": "bertz_ct",
@@ -236,6 +267,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Topological complexity index of a molecule",
+            "citations": "",
         },
         "Chi0": {
             "name": "chi0",
@@ -243,6 +275,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Chi-0 graph descriptor",
+            "citations": "",
         },
         "Chi0n": {
             "name": "chi0n",
@@ -250,6 +283,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Chi-0n graph descriptor",
+            "citations": "",
         },
         "Chi0v": {
             "name": "chi0v",
@@ -257,6 +291,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Chi-0v graph descriptor",
+            "citations": "",
         },
         "Chi1": {
             "name": "chi1",
@@ -264,6 +299,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Chi-1 graph descriptor",
+            "citations": "",
         },
         "Chi1n": {
             "name": "chi1n",
@@ -271,6 +307,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Chi-1n graph descriptor",
+            "citations": "",
         },
         "Chi1v": {
             "name": "chi1v",
@@ -278,6 +315,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Chi-1v graph descriptor",
+            "citations": "",
         },
         "Chi2n": {
             "name": "chi2n",
@@ -285,6 +323,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Chi-2n graph descriptor",
+            "citations": "",
         },
         "Chi2v": {
             "name": "chi2v",
@@ -292,6 +331,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Chi-2v graph descriptor",
+            "citations": "",
         },
         "Chi3n": {
             "name": "chi3n",
@@ -299,6 +339,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Chi-3n graph descriptor",
+            "citations": "",
         },
         "Chi3v": {
             "name": "chi3v",
@@ -306,6 +347,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Chi-3v graph descriptor",
+            "citations": "",
         },
         "Chi4n": {
             "name": "chi4n",
@@ -313,6 +355,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Chi-4n graph descriptor",
+            "citations": "",
         },
         "Chi4v": {
             "name": "chi4v",
@@ -320,6 +363,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Chi-4v graph descriptor",
+            "citations": "",
         },
         "HallKierAlpha": {
             "name": "hall_kier_alpha",
@@ -327,6 +371,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "",
+            "citations": "",
         },
         "Ipc": {
             "name": "ipc",
@@ -334,10 +379,11 @@ properties = {
             "type": "float",
             "units": "",
             "description": (
-                "the information content of the coefficients of the characteristic"
-                "polynomial of the adjacency matrix of a hydrogen-suppressed "
-                "graph of a molecule"
+                "the information content of the coefficients of the "
+                "characteristicpolynomial of the adjacency matrix of a "
+                "hydrogen-suppressed graph of a molecule"
             ),
+            "citations": "",
         },
         "Kappa1": {
             "name": "kappa1",
@@ -345,6 +391,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "",
+            "citations": "",
         },
         "Kappa2": {
             "name": "kappa2",
@@ -352,6 +399,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "",
+            "citations": "",
         },
         "Kappa3": {
             "name": "kappa3",
@@ -359,6 +407,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "",
+            "citations": "",
         },
         "LabuteASA": {
             "name": "labute_asa",
@@ -366,6 +415,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "",
+            "citations": "",
         },
         "PEOE_VSA1": {
             "name": "peoe_vsa1",
@@ -373,6 +423,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE Charge VSA Descriptor-1 (-inf < x < -0.30)",
+            "citations": "",
         },
         "PEOE_VSA10": {
             "name": "peoe_vsa10",
@@ -380,6 +431,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE Charge VSA Descriptor-10 ( 0.10 <= x <  0.15)",
+            "citations": "",
         },
         "PEOE_VSA11": {
             "name": "peoe_vsa11",
@@ -387,6 +439,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE Charge VSA Descriptor-11 ( 0.15 <= x <  0.20)",
+            "citations": "",
         },
         "PEOE_VSA12": {
             "name": "peoe_vsa12",
@@ -394,6 +447,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE Charge VSA Descriptor-12 ( 0.20 <= x <  0.25)",
+            "citations": "",
         },
         "PEOE_VSA13": {
             "name": "peoe_vsa13",
@@ -401,6 +455,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE Charge VSA Descriptor-13 ( 0.25 <= x <  0.30)",
+            "citations": "",
         },
         "PEOE_VSA14": {
             "name": "peoe_vsa14",
@@ -408,6 +463,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE Charge VSA Descriptor-14 ( 0.30 <= x < inf)",
+            "citations": "",
         },
         "PEOE_VSA2": {
             "name": "peoe_vsa2",
@@ -415,6 +471,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE Charge VSA Descriptor-2 (-0.30 <= x < -0.25)",
+            "citations": "",
         },
         "PEOE_VSA3": {
             "name": "peoe_vsa3",
@@ -422,6 +479,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE Charge VSA Descriptor-3 (-0.25 <= x < -0.20)",
+            "citations": "",
         },
         "PEOE_VSA4": {
             "name": "peoe_vsa4",
@@ -429,6 +487,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE Charge VSA Descriptor-4 (-0.20 <= x < -0.15)",
+            "citations": "",
         },
         "PEOE_VSA5": {
             "name": "peoe_vsa5",
@@ -436,6 +495,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE Charge VSA Descriptor-5 (-0.15 <= x < -0.10)",
+            "citations": "",
         },
         "PEOE_VSA6": {
             "name": "peoe_vsa6",
@@ -443,6 +503,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE Charge VSA Descriptor-6 (-0.10 <= x < -0.05)",
+            "citations": "",
         },
         "PEOE_VSA7": {
             "name": "peoe_vsa7",
@@ -450,6 +511,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE Charge VSA Descriptor-7 (-0.05 <= x <  0.00)",
+            "citations": "",
         },
         "PEOE_VSA8": {
             "name": "peoe_vsa8",
@@ -457,6 +519,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE Charge VSA Descriptor-8 ( 0.00 <= x <  0.05)",
+            "citations": "",
         },
         "PEOE_VSA9": {
             "name": "peoe_vsa9",
@@ -464,6 +527,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE Charge VSA Descriptor-9 ( 0.05 <= x <  0.10)",
+            "citations": "",
         },
         "SMR_VSA1": {
             "name": "smr_vsa1",
@@ -471,6 +535,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE MR VSA Descriptor-1 (-inf < x <  1.29)",
+            "citations": "",
         },
         "SMR_VSA10": {
             "name": "smr_vsa10",
@@ -478,6 +543,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE MR VSA Descriptor-10 ( 4.00 <= x < inf)",
+            "citations": "",
         },
         "SMR_VSA2": {
             "name": "smr_vsa2",
@@ -485,6 +551,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE MR VSA Descriptor-2 ( 1.29 <= x <  1.82)",
+            "citations": "",
         },
         "SMR_VSA3": {
             "name": "smr_vsa3",
@@ -492,6 +559,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE MR VSA Descriptor-3 ( 1.82 <= x <  2.24)",
+            "citations": "",
         },
         "SMR_VSA4": {
             "name": "smr_vsa4",
@@ -499,6 +567,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE MR VSA Descriptor-4 ( 2.24 <= x <  2.45)",
+            "citations": "",
         },
         "SMR_VSA5": {
             "name": "smr_vsa5",
@@ -506,6 +575,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE MR VSA Descriptor-5 ( 2.45 <= x <  2.75)",
+            "citations": "",
         },
         "SMR_VSA6": {
             "name": "smr_vsa6",
@@ -513,6 +583,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE MR VSA Descriptor-6 ( 2.75 <= x <  3.05)",
+            "citations": "",
         },
         "SMR_VSA7": {
             "name": "smr_vsa7",
@@ -520,6 +591,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE MR VSA Descriptor-7 ( 3.05 <= x <  3.63)",
+            "citations": "",
         },
         "SMR_VSA8": {
             "name": "smr_vsa8",
@@ -527,6 +599,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE MR VSA Descriptor-8 ( 3.63 <= x <  3.80)",
+            "citations": "",
         },
         "SMR_VSA9": {
             "name": "smr_vsa9",
@@ -534,6 +607,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE MR VSA Descriptor-9 ( 3.80 <= x <  4.00)",
+            "citations": "",
         },
         "SlogP_VSA1": {
             "name": "slogp_vsa1",
@@ -541,6 +615,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE logP VSA Descriptor-1 (-inf < x < -0.40)",
+            "citations": "",
         },
         "SlogP_VSA10": {
             "name": "slogp_vsa10",
@@ -548,6 +623,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE logP VSA Descriptor-10 ( 0.40 <= x <  0.50)",
+            "citations": "",
         },
         "SlogP_VSA11": {
             "name": "slogp_vsa11",
@@ -555,6 +631,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE logP VSA Descriptor-11 ( 0.50 <= x <  0.60)",
+            "citations": "",
         },
         "SlogP_VSA12": {
             "name": "slogp_vsa12",
@@ -562,6 +639,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE logP VSA Descriptor-12 ( 0.60 <= x < inf)",
+            "citations": "",
         },
         "SlogP_VSA2": {
             "name": "slogp_vsa2",
@@ -569,6 +647,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE logP VSA Descriptor-2 (-0.40 <= x < -0.20)",
+            "citations": "",
         },
         "SlogP_VSA3": {
             "name": "slogp_vsa3",
@@ -576,6 +655,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE logP VSA Descriptor-3 (-0.20 <= x <  0.00)",
+            "citations": "",
         },
         "SlogP_VSA4": {
             "name": "slogp_vsa4",
@@ -583,6 +663,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE logP VSA Descriptor-4 ( 0.00 <= x <  0.10)",
+            "citations": "",
         },
         "SlogP_VSA5": {
             "name": "slogp_vsa5",
@@ -590,6 +671,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE logP VSA Descriptor-5 ( 0.10 <= x <  0.15)",
+            "citations": "",
         },
         "SlogP_VSA6": {
             "name": "slogp_vsa6",
@@ -597,6 +679,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE logP VSA Descriptor-6 ( 0.15 <= x <  0.20)",
+            "citations": "",
         },
         "SlogP_VSA7": {
             "name": "slogp_vsa7",
@@ -604,6 +687,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE logP VSA Descriptor-7 ( 0.20 <= x <  0.25)",
+            "citations": "",
         },
         "SlogP_VSA8": {
             "name": "slogp_vsa8",
@@ -611,6 +695,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE logP VSA Descriptor-8 ( 0.25 <= x <  0.30)",
+            "citations": "",
         },
         "SlogP_VSA9": {
             "name": "slogp_vsa9",
@@ -618,6 +703,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "MOE logP VSA Descriptor-9 ( 0.30 <= x <  0.40)",
+            "citations": "",
         },
         "TPSA": {
             "name": "tpsa",
@@ -625,6 +711,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Topological polar surface area (TPSA) of a molecule",
+            "citations": "",
         },
         "EState_VSA1": {
             "name": "estate_vsa1",
@@ -632,6 +719,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "EState VSA Descriptor-1 (-inf < x <  -0.39)",
+            "citations": "",
         },
         "EState_VSA10": {
             "name": "estate_vsa10",
@@ -639,6 +727,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "EState VSA Descriptor-10 ( 9.17 <= x <  15.00)",
+            "citations": "",
         },
         "EState_VSA11": {
             "name": "estate_vsa11",
@@ -646,6 +735,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "EState VSA Descriptor-11 ( 15.00 <= x < inf)",
+            "citations": "",
         },
         "EState_VSA2": {
             "name": "estate_vsa2",
@@ -653,6 +743,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "EState VSA Descriptor-2 ( -0.39 <= x <  0.29)",
+            "citations": "",
         },
         "EState_VSA3": {
             "name": "estate_vsa3",
@@ -660,6 +751,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "EState VSA Descriptor-3 ( 0.29 <= x <  0.72)",
+            "citations": "",
         },
         "EState_VSA4": {
             "name": "estate_vsa4",
@@ -667,6 +759,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "EState VSA Descriptor-4 ( 0.72 <= x <  1.17)",
+            "citations": "",
         },
         "EState_VSA5": {
             "name": "estate_vsa5",
@@ -674,6 +767,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "EState VSA Descriptor-5 ( 1.17 <= x <  1.54)",
+            "citations": "",
         },
         "EState_VSA6": {
             "name": "estate_vsa6",
@@ -681,6 +775,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "EState VSA Descriptor-6 ( 1.54 <= x <  1.81)",
+            "citations": "",
         },
         "EState_VSA7": {
             "name": "estate_vsa7",
@@ -688,6 +783,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "EState VSA Descriptor-7 ( 1.81 <= x <  2.05)",
+            "citations": "",
         },
         "EState_VSA8": {
             "name": "estate_vsa8",
@@ -695,6 +791,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "EState VSA Descriptor-8 ( 2.05 <= x <  4.69)",
+            "citations": "",
         },
         "EState_VSA9": {
             "name": "estate_vsa9",
@@ -702,6 +799,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "EState VSA Descriptor-9 ( 4.69 <= x <  9.17)",
+            "citations": "",
         },
         "VSA_EState1": {
             "name": "vsa_estate1",
@@ -709,6 +807,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "VSA EState Descriptor-1 (-inf < x <  4.78)",
+            "citations": "",
         },
         "VSA_EState10": {
             "name": "vsa_estate10",
@@ -716,6 +815,7 @@ properties = {
             "type": "float",
             "units": "VSA EState Descriptor-10 ( 11.00 <= x < inf)",
             "description": "",
+            "citations": "",
         },
         "VSA_EState2": {
             "name": "vsa_estate2",
@@ -723,6 +823,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "VSA EState Descriptor-2 ( 4.78 <= x <  5.00)",
+            "citations": "",
         },
         "VSA_EState3": {
             "name": "vsa_estate3",
@@ -730,6 +831,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "VSA EState Descriptor-3 ( 5.00 <= x <  5.41)",
+            "citations": "",
         },
         "VSA_EState4": {
             "name": "vsa_estate4",
@@ -737,6 +839,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "VSA EState Descriptor-4 ( 5.41 <= x <  5.74)",
+            "citations": "",
         },
         "VSA_EState5": {
             "name": "vsa_estate5",
@@ -744,6 +847,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "VSA EState Descriptor-5 ( 5.74 <= x <  6.00)",
+            "citations": "",
         },
         "VSA_EState6": {
             "name": "vsa_estate6",
@@ -751,6 +855,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "VSA EState Descriptor-6 ( 6.00 <= x <  6.07)",
+            "citations": "",
         },
         "VSA_EState7": {
             "name": "vsa_estate7",
@@ -758,6 +863,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "VSA EState Descriptor-7 ( 6.07 <= x <  6.45)",
+            "citations": "",
         },
         "VSA_EState8": {
             "name": "vsa_estate8",
@@ -765,6 +871,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "VSA EState Descriptor-8 ( 6.45 <= x <  7.00)",
+            "citations": "",
         },
         "VSA_EState9": {
             "name": "vsa_estate9",
@@ -772,6 +879,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "VSA EState Descriptor-9 ( 7.00 <= x <  11.00)",
+            "citations": "",
         },
         "FractionCSP3": {
             "name": "fraction_csp3",
@@ -779,6 +887,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Fraction of sp3 hybridized C atoms in the molecule",
+            "citations": "",
         },
         "HeavyAtomCount": {
             "name": "heavy_atom_count",
@@ -786,6 +895,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of heavy atoms in the molecule",
+            "citations": "",
         },
         "NHOHCount": {
             "name": "nhoh_count",
@@ -793,6 +903,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of NH or OH groups in a molecule",
+            "citations": "",
         },
         "NOCount": {
             "name": "no_count",
@@ -800,6 +911,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of nitrogens and oxygens in a molecule",
+            "citations": "",
         },
         "NumAliphaticCarbocycles": {
             "name": "num_aliphatic_carbocycles",
@@ -807,9 +919,10 @@ properties = {
             "type": "int",
             "units": "",
             "description": (
-                "Number of aliphatic (containing at least "
-                "one non-aromatic bond) carbocycles in a molecule"
+                "Number of aliphatic (containing at least one "
+                "non-aromatic bond) carbocycles in a molecule"
             ),
+            "citations": "",
         },
         "NumAliphaticHeterocycles": {
             "name": "num_aliphatic_heterocycles",
@@ -817,9 +930,10 @@ properties = {
             "type": "int",
             "units": "",
             "description": (
-                "Number of aliphatic (containing "
-                "at least one non-aromatic bond) heterocycles in a molecule"
+                "Number of aliphatic (containing at least one "
+                "non-aromatic bond) heterocycles in a molecule"
             ),
+            "citations": "",
         },
         "NumAliphaticRings": {
             "name": "num_aliphatic_rings",
@@ -827,9 +941,10 @@ properties = {
             "type": "int",
             "units": "",
             "description": (
-                "Number of aliphatic (containing "
-                "at least one non-aromatic bond) rings in a molecule"
+                "Number of aliphatic (containing at least one "
+                "non-aromatic bond) rings in a molecule"
             ),
+            "citations": "",
         },
         "NumAromaticCarbocycles": {
             "name": "num_aromatic_carbocycles",
@@ -837,6 +952,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of aromatic carbocycles in a molecule",
+            "citations": "",
         },
         "NumAromaticHeterocycles": {
             "name": "num_aromatic_heterocycles",
@@ -844,6 +960,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of aromatic heterocycles in a molecule",
+            "citations": "",
         },
         "NumAromaticRings": {
             "name": "num_aromatic_rings",
@@ -851,6 +968,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of aromatic rings in a molecule",
+            "citations": "",
         },
         "NumHAcceptors": {
             "name": "num_h_acceptors",
@@ -858,6 +976,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of hydrogen bond acceptors",
+            "citations": "",
         },
         "NumHDonors": {
             "name": "num_h_donors",
@@ -865,6 +984,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of hydrogen bond donors",
+            "citations": "",
         },
         "NumHeteroatoms": {
             "name": "num_heteroatoms",
@@ -872,6 +992,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of heteroatoms",
+            "citations": "",
         },
         "NumRotatableBonds": {
             "name": "num_rotatable_bonds",
@@ -879,6 +1000,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of rotatable bonds",
+            "citations": "",
         },
         "NumSaturatedCarbocycles": {
             "name": "num_saturated_carbocycles",
@@ -886,6 +1008,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of saturated carbocycles in the molecule",
+            "citations": "",
         },
         "NumSaturatedHeterocycles": {
             "name": "num_saturated_heterocycles",
@@ -893,6 +1016,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of saturated heterocycles in the molecule",
+            "citations": "",
         },
         "NumSaturatedRings": {
             "name": "num_saturated_rings",
@@ -900,6 +1024,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of saturated rings in the molecule",
+            "citations": "",
         },
         "RingCount": {
             "name": "ring_count",
@@ -907,6 +1032,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of rings",
+            "citations": "",
         },
         "MolLogP": {
             "name": "mol_logp",
@@ -914,6 +1040,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Wildman-Crippen LogP value",
+            "citations": "",
         },
         "MolMR": {
             "name": "log_mr",
@@ -921,6 +1048,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Wildman-Crippen MR value",
+            "citations": "",
         },
         "fr_Al_COO": {
             "name": "fr_al_coo",
@@ -928,6 +1056,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of aliphatic carboxylic acids",
+            "citations": "",
         },
         "fr_Al_OH": {
             "name": "fr_al_oh",
@@ -935,6 +1064,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of aliphatic hydroxyl groups",
+            "citations": "",
         },
         "fr_Al_OH_noTert": {
             "name": "fr_al_oh_no_tert",
@@ -942,6 +1072,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of aliphatic hydroxyl groups excluding tert-OH",
+            "citations": "",
         },
         "fr_ArN": {
             "name": "fr_arn",
@@ -949,6 +1080,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of N functional groups attached to aromatics",
+            "citations": "",
         },
         "fr_Ar_COO": {
             "name": "fr_ar_coo",
@@ -956,6 +1088,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of aromatic carboxylic acid groups",
+            "citations": "",
         },
         "fr_Ar_N": {
             "name": "fr_ar_n",
@@ -963,6 +1096,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of aromatic nitrogens",
+            "citations": "",
         },
         "fr_Ar_NH": {
             "name": "fr_ar_nh",
@@ -970,6 +1104,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of aromatic amines",
+            "citations": "",
         },
         "fr_Ar_OH": {
             "name": "fr_ar_oh",
@@ -977,6 +1112,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of aromatic hydroxyl groups",
+            "citations": "",
         },
         "fr_COO": {
             "name": "fr_coo",
@@ -984,6 +1120,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of carboxylic acids",
+            "citations": "",
         },
         "fr_COO2": {
             "name": "fr_coo2",
@@ -991,6 +1128,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of carboxylic acids-2",
+            "citations": "",
         },
         "fr_C_O": {
             "name": "fr_c_o",
@@ -998,6 +1136,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of carbonyl O",
+            "citations": "",
         },
         "fr_C_O_noCOO": {
             "name": "fr_c_o_no_coo",
@@ -1005,6 +1144,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of carbonyl O, excluding COOH",
+            "citations": "",
         },
         "fr_C_S": {
             "name": "fr_c_s",
@@ -1012,6 +1152,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of thiocarbonyl",
+            "citations": "",
         },
         "fr_HOCCN": {
             "name": "fr_hoccn",
@@ -1019,6 +1160,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of C(OH)CCN-Ctert-alkyl or C(OH)CCNcyclic",
+            "citations": "",
         },
         "fr_Imine": {
             "name": "fr_imine",
@@ -1026,6 +1168,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of imines",
+            "citations": "",
         },
         "fr_NH0": {
             "name": "fr_nh0",
@@ -1033,6 +1176,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of tertiary amines",
+            "citations": "",
         },
         "fr_NH1": {
             "name": "fr_nh1",
@@ -1040,6 +1184,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of secondary amines",
+            "citations": "",
         },
         "fr_NH2": {
             "name": "fr_nh2",
@@ -1047,6 +1192,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of primary amines",
+            "citations": "",
         },
         "fr_N_O": {
             "name": "fr_n_o",
@@ -1054,6 +1200,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of hydroxylamine groups",
+            "citations": "",
         },
         "fr_Ndealkylation1": {
             "name": "fr_ndeakylation1",
@@ -1061,6 +1208,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of XCCNR groups",
+            "citations": "",
         },
         "fr_Ndealkylation2": {
             "name": "fr_ndeakylation2",
@@ -1071,6 +1219,7 @@ properties = {
                 "Number of tert-alicyclic amines (no "
                 "heteroatoms, not quinine-like bridged N)"
             ),
+            "citations": "",
         },
         "fr_Nhpyrrole": {
             "name": "fr_nhpyrrole",
@@ -1078,6 +1227,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of H-pyrrole nitrogens",
+            "citations": "",
         },
         "fr_SH": {
             "name": "fr_sh",
@@ -1085,6 +1235,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of thiol groups",
+            "citations": "",
         },
         "fr_aldehyde": {
             "name": "fr_aldehyde",
@@ -1092,6 +1243,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of aldehydes",
+            "citations": "",
         },
         "fr_alkyl_carbamate": {
             "name": "fr_alkyl_carbamate",
@@ -1099,6 +1251,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of alkyl carbamates (subject to hydrolysis)",
+            "citations": "",
         },
         "fr_alkyl_halide": {
             "name": "fr_alkyl_halide",
@@ -1106,6 +1259,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of alkyl halides",
+            "citations": "",
         },
         "fr_allylic_oxid": {
             "name": "fr_allylic_oxid",
@@ -1113,8 +1267,9 @@ properties = {
             "type": "int",
             "units": "",
             "description": (
-                "Number of allylic oxidation sites " "excluding steroid dienone"
+                "Number of allylic oxidation sites excluding " "steroid dienone"
             ),
+            "citations": "",
         },
         "fr_amide": {
             "name": "fr_amide",
@@ -1122,6 +1277,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of amides",
+            "citations": "",
         },
         "fr_amidine": {
             "name": "fr_amidine",
@@ -1129,6 +1285,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of amidine groups",
+            "citations": "",
         },
         "fr_aniline": {
             "name": "fr_aniline",
@@ -1136,6 +1293,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of anilines",
+            "citations": "",
         },
         "fr_aryl_methyl": {
             "name": "fr_aryl_methyl",
@@ -1143,6 +1301,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of aryl methyl sites for hydroxylation",
+            "citations": "",
         },
         "fr_azide": {
             "name": "fr_azide",
@@ -1150,6 +1309,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of azide groups",
+            "citations": "",
         },
         "fr_azo": {
             "name": "fr_azo",
@@ -1157,6 +1317,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of azo groups",
+            "citations": "",
         },
         "fr_barbitur": {
             "name": "fr_barbitur",
@@ -1164,6 +1325,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of barbiturate groups",
+            "citations": "",
         },
         "fr_benzene": {
             "name": "fr_benzene",
@@ -1171,6 +1333,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of benzene rings",
+            "citations": "",
         },
         "fr_benzodiazepine": {
             "name": "fr_benzodiazepine",
@@ -1178,6 +1341,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of benzodiazepines with no additional fused rings",
+            "citations": "",
         },
         "fr_bicyclic": {
             "name": "fr_bicyclic",
@@ -1185,6 +1349,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of bicyclic rings",
+            "citations": "",
         },
         "fr_diazo": {
             "name": "fr_diazo",
@@ -1192,6 +1357,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of diazo groups",
+            "citations": "",
         },
         "fr_dihydropyridine": {
             "name": "fr_dihydropyridine",
@@ -1199,6 +1365,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of dihydropyridines",
+            "citations": "",
         },
         "fr_epoxide": {
             "name": "fr_epoxide",
@@ -1206,6 +1373,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of epoxide rings",
+            "citations": "",
         },
         "fr_ester": {
             "name": "fr_ester",
@@ -1213,6 +1381,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of ester groups",
+            "citations": "",
         },
         "fr_ether": {
             "name": "fr_ether",
@@ -1220,6 +1389,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of ether oxygens (including phenoxy)",
+            "citations": "",
         },
         "fr_furan": {
             "name": "fr_furan",
@@ -1227,6 +1397,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of furan rings",
+            "citations": "",
         },
         "fr_guanido": {
             "name": "fr_guanido",
@@ -1234,6 +1405,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of guanidine groups",
+            "citations": "",
         },
         "fr_halogen": {
             "name": "fr_halogen",
@@ -1241,6 +1413,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of halogens",
+            "citations": "",
         },
         "fr_hdrzine": {
             "name": "fr_hdrzine",
@@ -1248,6 +1421,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of hydrazine groups",
+            "citations": "",
         },
         "fr_hdrzone": {
             "name": "fr_hdrzone",
@@ -1255,6 +1429,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of hydrazone groups",
+            "citations": "",
         },
         "fr_imidazole": {
             "name": "fr_imidazole",
@@ -1262,6 +1437,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of imidazole rings",
+            "citations": "",
         },
         "fr_imide": {
             "name": "fr_imide",
@@ -1269,6 +1445,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of imide groups",
+            "citations": "",
         },
         "fr_isocyan": {
             "name": "fr_isocyan",
@@ -1276,6 +1453,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of isocyanates",
+            "citations": "",
         },
         "fr_isothiocyan": {
             "name": "fr_isothiocyan",
@@ -1283,6 +1461,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of isothiocyanates",
+            "citations": "",
         },
         "fr_ketone": {
             "name": "fr_ketone",
@@ -1290,6 +1469,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of ketones",
+            "citations": "",
         },
         "fr_ketone_Topliss": {
             "name": "fr_ketone_topliss",
@@ -1297,9 +1477,10 @@ properties = {
             "type": "int",
             "units": "",
             "description": (
-                "Number of ketones excluding diaryl, "
-                "a,b-unsaturated dienones, heteroatom on alpha carbon"
+                "Number of ketones excluding diaryl, a,b-unsaturated "
+                "dienones, heteroatom on alpha carbon"
             ),
+            "citations": "",
         },
         "fr_lactam": {
             "name": "fr_lactam",
@@ -1307,6 +1488,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of beta lactams",
+            "citations": "",
         },
         "fr_lactone": {
             "name": "fr_lactone",
@@ -1314,6 +1496,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of cyclic esters (lactones)",
+            "citations": "",
         },
         "fr_methoxy": {
             "name": "fr_methoxy",
@@ -1321,6 +1504,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of methoxy groups -OCH3",
+            "citations": "",
         },
         "fr_morpholine": {
             "name": "fr_morpholine",
@@ -1328,6 +1512,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of morpholine rings",
+            "citations": "",
         },
         "fr_nitrile": {
             "name": "fr_nitrile",
@@ -1335,6 +1520,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of nitriles",
+            "citations": "",
         },
         "fr_nitro": {
             "name": "fr_nitro",
@@ -1342,6 +1528,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of nitro groups",
+            "citations": "",
         },
         "fr_nitro_arom": {
             "name": "fr_nitro_arom",
@@ -1349,6 +1536,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of nitro benzene ring substituents",
+            "citations": "",
         },
         "fr_nitro_arom_nonortho": {
             "name": "fr_nitro_arom_nonortho",
@@ -1356,6 +1544,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of non-ortho nitro benzene ring substituents",
+            "citations": "",
         },
         "fr_nitroso": {
             "name": "fr_nitroso",
@@ -1363,6 +1552,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of nitroso groups, excluding NO2",
+            "citations": "",
         },
         "fr_oxazole": {
             "name": "fr_oxazole",
@@ -1370,6 +1560,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of oxazole rings",
+            "citations": "",
         },
         "fr_oxime": {
             "name": "fr_oxime",
@@ -1377,6 +1568,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of oxime groups",
+            "citations": "",
         },
         "fr_para_hydroxylation": {
             "name": "fr_para_hydroxylation",
@@ -1384,6 +1576,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of para-hydroxylation sites",
+            "citations": "",
         },
         "fr_phenol": {
             "name": "fr_phenol",
@@ -1391,6 +1584,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of phenols",
+            "citations": "",
         },
         "fr_phenol_noOrthoHbond": {
             "name": "fr_phenol_no_ortho_hbond",
@@ -1401,6 +1595,7 @@ properties = {
                 "Number of phenolic OH excluding ortho "
                 "intramolecular H-bond substituents"
             ),
+            "citations": "",
         },
         "fr_phos_acid": {
             "name": "fr_phos_acid",
@@ -1408,6 +1603,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of phosphoric acid groups",
+            "citations": "",
         },
         "fr_phos_ester": {
             "name": "fr_phos_ester",
@@ -1415,6 +1611,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of phosphoric ester groups",
+            "citations": "",
         },
         "fr_piperdine": {
             "name": "fr_piperdine",
@@ -1422,6 +1619,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of piperdine rings",
+            "citations": "",
         },
         "fr_piperzine": {
             "name": "fr_piperzine",
@@ -1429,6 +1627,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of piperzine rings",
+            "citations": "",
         },
         "fr_priamide": {
             "name": "fr_priamide",
@@ -1436,6 +1635,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of primary amides",
+            "citations": "",
         },
         "fr_prisulfonamd": {
             "name": "fr_prisulfonamd",
@@ -1443,6 +1643,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of primary sulfonamides",
+            "citations": "",
         },
         "fr_pyridine": {
             "name": "fr_pyridine",
@@ -1450,6 +1651,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of pyridine rings",
+            "citations": "",
         },
         "fr_quatN": {
             "name": "fr_quatN",
@@ -1457,6 +1659,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of quarternary nitrogens",
+            "citations": "",
         },
         "fr_sulfide": {
             "name": "fr_sulfide",
@@ -1464,6 +1667,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of thioether groups",
+            "citations": "",
         },
         "fr_sulfonamd": {
             "name": "fr_sulfonamd",
@@ -1471,6 +1675,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of sulfonamides",
+            "citations": "",
         },
         "fr_sulfone": {
             "name": "fr_sulfone",
@@ -1478,6 +1683,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of sulfone groups",
+            "citations": "",
         },
         "fr_term_acetylene": {
             "name": "fr_term_acetylene",
@@ -1485,6 +1691,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of terminal acetylenes",
+            "citations": "",
         },
         "fr_tetrazole": {
             "name": "fr_tetrazole",
@@ -1492,6 +1699,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of tetrazole rings",
+            "citations": "",
         },
         "fr_thiazole": {
             "name": "fr_thiazole",
@@ -1499,6 +1707,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of thiazole rings",
+            "citations": "",
         },
         "fr_thiocyan": {
             "name": "fr_thiocyan",
@@ -1506,6 +1715,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of thiocyanates",
+            "citations": "",
         },
         "fr_thiophene": {
             "name": "fr_thiophene",
@@ -1513,6 +1723,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of thiophene rings",
+            "citations": "",
         },
         "fr_unbrch_alkane": {
             "name": "fr_unbrch_alkane",
@@ -1520,9 +1731,10 @@ properties = {
             "type": "int",
             "units": "",
             "description": (
-                "Number of unbranched alkanes of at "
-                "least 4 members (excludes halogenated alkanes)"
+                "Number of unbranched alkanes of at least "
+                "4 members (excludes halogenated alkanes)"
             ),
+            "citations": "",
         },
         "fr_urea": {
             "name": "fr_urea",
@@ -1530,6 +1742,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "Number of urea groups",
+            "citations": "",
         },
     },
 }
