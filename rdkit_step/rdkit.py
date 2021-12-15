@@ -17,6 +17,7 @@ except ModuleNotFoundError:
     raise
 
 import rdkit_step
+from rdkit_step import metadata
 import seamm
 from seamm_util import ureg, Q_  # noqa: F401
 import seamm_util.printing as printing
@@ -156,10 +157,24 @@ class Rdkit(seamm.Node):
         # Print what we are doing
         printer.important(__(self.description_text(P), indent=self.indent))
 
+        # Add the rdkit_step principal reference
+        self.references.cite(
+            raw=self._bibliography["rdkit_step"],
+            alias="rdkit_step",
+            module="rdkit_step",
+            level=1,
+            note="Principal reference for the rdkit_step module",
+        )
+        references = set()
         mol = configuration.to_RDKMol()
 
         for feature in self.parameters["features"].value:
             if feature in Descriptors.__dict__:
+                # Add the feature citation(s)
+                citation_id = metadata.properties["2D-Descriptors"][feature][
+                    "citations"
+                ]
+                references.add(citation_id)
                 value = Descriptors.__dict__[feature](mol)
                 if in_table:
                     if feature not in table.columns:
@@ -175,6 +190,11 @@ class Rdkit(seamm.Node):
                         )
                     properties.put(key, value)
             elif feature in Descriptors3D.__dict__:
+                # Add the feature citation(s)
+                citation_id = metadata.properties["3D-Descriptors"][feature][
+                    "citations"
+                ]
+                references.add(citation_id)
                 value = Descriptors3D.__dict__[feature](mol)
                 if in_table:
                     if feature not in table.columns:
@@ -191,6 +211,17 @@ class Rdkit(seamm.Node):
                     properties.put(key, value)
             else:
                 print(f"     unable to handle feature '{feature}'")
+
+        # Add the references
+        print(references)
+        for reference in references:
+            self.references.cite(
+                raw=self._bibliography[reference],
+                alias=reference,
+                module="rdkit_step",
+                level=2,
+                note="RDKit feature citation",
+            )
 
         return next_node
 

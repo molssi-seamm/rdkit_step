@@ -28,7 +28,7 @@ See the documentation for the Reference Handler for the other arguments to cite(
 # are automatically filled in with information about current version of the plug-in.
 # This is handled in seamm/nody.py, the run() method.
 
-@Misc{rdkit_step,
+@misc{rdkit_step,
 	author = {Mohammad Mostafanejad},
 	title = {Rdkit plug-in for SEAMM},
 	month = {$month},
@@ -37,6 +37,73 @@ See the documentation for the Reference Handler for the other arguments to cite(
 	url = {https://github.com/molssi-seamm/rdkit_step },
 	address = {Molecular Sciences Software Institute, Blacksburg, VA, USA},
 	version = {$version}
+}
+
+####################
+## 3D Descriptors ##
+####################
+
+# Asphericity
+@article{doi:10.1063/1.464689,
+	author = {Baumgärtner, A.},
+	title = {Shapes of flexible vesicles at constant volume},
+	journal = {The Journal of Chemical Physics},
+	volume = {98},
+	number = {9},
+	pages = {7496-7501},
+	year = {1993},
+	doi = {10.1063/1.464689},
+	url = {https://doi.org/10.1063/1.464689},
+	eprint = {https://doi.org/10.1063/1.464689}
+}
+
+# Eccentricity & RadiusofGyration
+@inbook{doi:10.1002/9780470125861.ch5,
+	author = {Arteca, Gustavo A.},
+	publisher = {John Wiley & Sons, Ltd},
+	isbn = {9780470125861},
+	title = {Molecular Shape Descriptors},
+	booktitle = {Reviews in Computational Chemistry},
+	chapter = {},
+	pages = {191-253},
+	doi = {https://doi.org/10.1002/9780470125861.ch5},
+	url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/9780470125861.ch5},
+	eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/9780470125861.ch5},
+	year = {1996},
+	keywords = {molecular descriptors, heirarchy, nuclear geometry, molecular shape characterization, flexible molecules},
+	abstract = {Summary This chapter contains sections titled: Introduction Hierarchical Levels of Molecular Shape and Shape Characterizing the Nuclear Geometry Characterizing Molecular Shape by Geometry and Connectivity Characterizing the Three-Dimensional Molecular Body: Some Comments on Shape Dynamics of Flexible Molecules Some Comments on Descriptors of Relative Shape Summary Appendix: Moments of Inertia and Radius of Gyration}
+}
+
+# InertialShapeFactor
+@inbook{doi:10.1002/9783527618279.ch37,
+	author = {Todeschini, Roberto and Consonni, Viviana},
+	publisher = {John Wiley & Sons, Ltd},
+	isbn = {9783527618279},
+	title = {Descriptors from Molecular Geometry},
+	booktitle = {Handbook of Chemoinformatics},
+	chapter = {VIII.2},
+	pages = {1004-1033},
+	doi = {https://doi.org/10.1002/9783527618279.ch37},
+	url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/9783527618279.ch37},
+	eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/9783527618279.ch37},
+	year = {2003},
+	keywords = {isomorphism, mathematical, chemical compounds, cardinality},
+	abstract = {Summary This chapter contains sections titled: Introduction Geometrical Descriptors for Molecular Size and Shape WHIM Descriptors GETAWAY Descriptors 3D Autocorrelation Descriptors 3D-MORSE and RDF Descriptors EVA and EEVA Descriptors Conclusions}
+}
+
+# NPR1 and NPR2
+@article{doi:10.1021/ci025599w,
+	author = {Sauer, Wolfgang H. B. and Schwarz, Matthias K.},
+	title = {Molecular Shape Diversity of Combinatorial Libraries:  A Prerequisite for Broad Bioactivity},
+	journal = {Journal of Chemical Information and Computer Sciences},
+	volume = {43},
+	number = {3},
+	pages = {987-1003},
+	year = {2003},
+	doi = {10.1021/ci025599w},
+	note ={PMID: 12767158},
+	URL = {https://doi.org/10.1021/ci025599w},
+	eprint = {https://doi.org/10.1021/ci025599w}
 }
 
 ####################
@@ -56,7 +123,3 @@ See the documentation for the Reference Handler for the other arguments to cite(
 	author = {Johann Gasteiger and Mario Marsili},
 	abstract = {A method is presented for the rapid calculation of atomic charges in σ-bonded and nonconjugated π-systems. Atoms are characterized by their orbital electronegativities. In the calculation only the connectivities of the atoms are considered. Thus only the topology of a molecule is of importance. Through an iterative procedure partial equalization of orbital electronegativity is obtained. Excellent correlations of the atomic charges with core electron binding energies and with acidity constants are observed. This establishes their value in predicting experimental data.}
 }
-
-####################
-## 3D Descriptors ##
-####################

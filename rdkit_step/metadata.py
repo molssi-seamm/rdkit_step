@@ -9,7 +9,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Molecular asphericity",
-            "citations": "",
+            "citations": ["doi:10.1063/1.464689"],
         },
         "Eccentricity": {
             "name": "eccentricity",
@@ -17,7 +17,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Molecular eccentricity",
-            "citations": "",
+            "citations": ["doi:10.1002/9780470125861.ch5"],
         },
         "InertialShapeFactor": {
             "name": "inertial_shape_factor",
@@ -25,7 +25,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Inertial shape factor",
-            "citations": "",
+            "citations": ["doi:10.1002/9783527618279.ch37"],
         },
         "NPR1": {
             "name": "npr1",
@@ -33,7 +33,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Normalized principal moments ratio 1 (=I1/I3)",
-            "citations": "",
+            "citations": ["doi:10.1021/ci025599w"],
         },
         "NPR2": {
             "name": "npr2",
@@ -41,7 +41,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Normalized principal moments ratio 2 (=I2/I3)",
-            "citations": "",
+            "citations": ["doi:10.1021/ci025599w"],
         },
     },
     "2D-Descriptors": {
@@ -68,7 +68,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": (
-                "Maximum absolute value of the electrotopological " "state atom index"
+                "Maximum absolute value of the electrotopological state atom index"
             ),
             "citations": "",
         },
@@ -78,7 +78,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": (
-                "Minimum absolute value of the electrotopological " "state atom index"
+                "Minimum absolute value of the electrotopological state atom index"
             ),
             "citations": "",
         },
@@ -139,7 +139,7 @@ properties = {
             "type": "float",
             "units": "a.u.",
             "description": "Maximum partial charge on the molecule",
-            "citations": "",
+            "citations": ["GASTEIGER19803219"],
         },
         "MinPartialCharge": {
             "name": "min_partial_charge",
@@ -147,7 +147,7 @@ properties = {
             "type": "float",
             "units": "a.u.",
             "description": "Minimum partial charge on the molecule",
-            "citations": "",
+            "citations": ["GASTEIGER19803219"],
         },
         "MaxAbsPartialCharge": {
             "name": "max_abs_partial_charge",
@@ -155,7 +155,7 @@ properties = {
             "type": "float",
             "units": "a.u.",
             "description": "Maximum absolute value of partial charge on the molecule",
-            "citations": "",
+            "citations": ["GASTEIGER19803219"],
         },
         "MinAbsPartialCharge": {
             "name": "min_abs_partial_charge",
@@ -163,7 +163,7 @@ properties = {
             "type": "float",
             "units": "a.u.",
             "description": "Minimum absolute value of partial charge on the molecule",
-            "citations": "",
+            "citations": ["GASTEIGER19803219"],
         },
         "FpDensityMorgan1": {
             "name": "fp_density_morgan1",
