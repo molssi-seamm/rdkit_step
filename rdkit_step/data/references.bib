@@ -39,6 +39,17 @@ See the documentation for the Reference Handler for the other arguments to cite(
 	version = {$version}
 }
 
+@misc{rdkit_website,
+	author = {Jacob Gora and Gareth Jones and Brian Kelley and Ricardo Rodriguez-Schmidt and Paolo Tosco and Kazuya Ujihara and Riccardo Vianello},
+	title = {RDKit: Open-source cheminformatics},
+	month = {September,
+	year = {2021},
+	organization = {RDKit},
+	url = {https://doi.org/10.5281/zenodo.5773460},
+	address = {Zenodo},
+	version = {2021.9.3}
+}
+
 ####################
 ## 3D Descriptors ##
 ####################
@@ -110,6 +121,7 @@ See the documentation for the Reference Handler for the other arguments to cite(
 ## 2D Descriptors ##
 ####################
 
+# Gasteiger charges (MaxPartialCharge, MinPartialCharge, MaxAbsPartialCharge and MinAbsPartialCharge)
 @article{GASTEIGER19803219,
 	Atitle = {Iterative partial equalization of orbital electronegativity—a rapid access to atomic charges},
 	journal = {Tetrahedron},
@@ -122,4 +134,92 @@ See the documentation for the Reference Handler for the other arguments to cite(
 	url = {https://www.sciencedirect.com/science/article/pii/0040402080801682},
 	author = {Johann Gasteiger and Mario Marsili},
 	abstract = {A method is presented for the rapid calculation of atomic charges in σ-bonded and nonconjugated π-systems. Atoms are characterized by their orbital electronegativities. In the calculation only the connectivities of the atoms are considered. Thus only the topology of a molecule is of importance. Through an iterative procedure partial equalization of orbital electronegativity is obtained. Excellent correlations of the atomic charges with core electron binding energies and with acidity constants are observed. This establishes their value in predicting experimental data.}
+}
+
+# Morgan Fingerprints
+@article{doi:10.1021/ci100050t,
+	author = {Rogers, David and Hahn, Mathew},
+	title = {Extended-Connectivity Fingerprints},
+	journal = {Journal of Chemical Information and Modeling},
+	volume = {50},
+	number = {5},
+	pages = {742-754},
+	year = {2010},
+	doi = {10.1021/ci100050t},
+	note ={PMID: 20426451},
+	URL = {https://doi.org/10.1021/ci100050t},
+	eprint = {https://doi.org/10.1021/ci100050t}
+}
+
+# BCUT2D_*
+@inbook{Pearlman_1997,
+	author = {Pearlman, R. S. and Smith, K. M.},
+	publisher = {Kluwer Academic Publishers},
+	title = {Novel Software Tools for Chemical Diversity},
+	booktitle = {3D-QSAR and Drug design: Recent Advances},
+	year = {1997},
+	address = {Dordrecht, Netherlands},
+}
+
+# BalabanJ
+@article{BALABAN1982399,
+title = {Highly discriminating distance-based topological index},
+journal = {Chemical Physics Letters},
+volume = {89},
+number = {5},
+pages = {399-404},
+year = {1982},
+issn = {0009-2614},
+doi = {https://doi.org/10.1016/0009-2614(82)80009-2},
+url = {https://www.sciencedirect.com/science/article/pii/0009261482800092},
+author = {Alexandru T. Balaban},
+abstract = {A new topological indexJ (based on distance sumssi as graph invariants) is proposed. For unsaturated or aromatic compounds, fractional bond orders are used in calculatingsi. The degeneracy ofJ is lowest among all single topological indices described so far. The asymptotic behaviour ofJ is discussed, e.g. whenn → ∞ in CnH2n = 2,Jar π for linear alkanes, andJ → ∞ for highly branched ones.}
+}
+
+# BertzCT
+@article{doi:10.1021/ja00402a071,
+author = {Bertz, Steven H.},
+title = {The first general index of molecular complexity},
+journal = {Journal of the American Chemical Society},
+volume = {103},
+number = {12},
+pages = {3599-3601},
+year = {1981},
+doi = {10.1021/ja00402a071},
+URL = {https://doi.org/10.1021/ja00402a071},
+eprint = {https://doi.org/10.1021/ja00402a071},
+}
+
+# Chi0, Chi1
+# Chi0n- Chi4n
+# Chi0v- Chi4v
+# HallKierAlpha
+# Kappa1- Kappa3
+@inbook{doi:https://doi.org/10.1002/9780470125793.ch9,
+author = {Hall, Lowell H. and Kier, Lemont B.},
+publisher = {John Wiley & Sons, Ltd},
+isbn = {9780470125793},
+title = {The Molecular Connectivity Chi Indexes and Kappa Shape Indexes in Structure-Property Modeling},
+booktitle = {Reviews in Computational Chemistry},
+chapter = {},
+pages = {367-422},
+doi = {https://doi.org/10.1002/9780470125793.ch9},
+url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/9780470125793.ch9},
+eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/9780470125793.ch9},
+year = {1991},
+abstract = {Summary This chapter contains sections titled: Introduction Background for Molecular Connectivity Development of Molecular Connectivity Molecular Connectivity Approach Molecular Connectivity Method QSAR Applications of Molecular Connectivity Chi Indexes Characterization of Molecular Shape Background: Steric or Shape Influence Methods for Steric Quantification Model of Molecular Shape Based on Chemical Graph Theory Shape Infromation in the Kappa Values Encoding Atom Identity Kappa Index Values for Small Molecules Molecular Shape Quantitation General Applications Specific Application of Kappa Indexes Characterization of Skeletal Atoms, the Topological State}
+}
+
+# Ipc
+@article{doi:10.1063/1.434593,
+author = {Bonchev,D. and Trinajstić,N.},
+title = {Information theory, distance matrix, and molecular branching},
+journal = {The Journal of Chemical Physics},
+volume = {67},
+number = {10},
+pages = {4517-4533},
+year = {1977},
+doi = {10.1063/1.434593},
+URL = {https://doi.org/10.1063/1.434593},
+eprint = {https://doi.org/10.1063/1.434593}
 }

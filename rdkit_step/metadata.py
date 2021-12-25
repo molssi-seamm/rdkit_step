@@ -52,7 +52,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Maximum value of the electrotopological state atom index",
-            "citations": "",
+            "citations": "rdkit_website",
         },
         "MinEStateIndex": {
             "name": "min_e_state_index",
@@ -60,7 +60,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Minimum value of the electrotopological state atom index",
-            "citations": "",
+            "citations": "rdkit_website",
         },
         "MaxAbsEStateIndex": {
             "name": "max_abs_e_state_index",
@@ -70,7 +70,7 @@ properties = {
             "description": (
                 "Maximum absolute value of the electrotopological state atom index"
             ),
-            "citations": "",
+            "citations": "rdkit_website",
         },
         "MinAbsEStateIndex": {
             "name": "min_abs_e_state_index",
@@ -80,7 +80,7 @@ properties = {
             "description": (
                 "Minimum absolute value of the electrotopological state atom index"
             ),
-            "citations": "",
+            "citations": "rdkit_website",
         },
         "qed": {
             "name": "qed",
@@ -88,7 +88,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Quantitative estimation of drug-likeness",
-            "citations": "",
+            "citations": "rdkit_website",
         },
         "MolWt": {
             "name": "mol_wt",
@@ -96,7 +96,7 @@ properties = {
             "type": "float",
             "units": "a.u.",
             "description": "Average molecular weight",
-            "citations": "",
+            "citations": "rdkit_website",
         },
         "HeavyAtomMolWt": {
             "name": "heavy_atom_mol_wt",
@@ -104,7 +104,7 @@ properties = {
             "type": "float",
             "units": "a.u.",
             "description": "Average molecular weight ignoring hydrogens",
-            "citations": "",
+            "citations": "rdkit_website",
         },
         "ExactMolWt": {
             "name": "exact_mol_wt",
@@ -120,7 +120,7 @@ properties = {
             "type": "int",
             "units": "",
             "description": "The number of valence electrons in the molecule",
-            "citations": "",
+            "citations": "rdkit_website",
         },
         "NumRadicalElectrons": {
             "name": "num_radical_electrons",
@@ -131,7 +131,7 @@ properties = {
                 "The number of radical electrons in the "
                 "molecule (regardless of their spin)"
             ),
-            "citations": "",
+            "citations": "rdkit_website",
         },
         "MaxPartialCharge": {
             "name": "max_partial_charge",
@@ -171,7 +171,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Morgan-1 density fingerprint",
-            "citations": "",
+            "citations": "doi:10.1021/ci100050t",
         },
         "FpDensityMorgan2": {
             "name": "fp_density_morgan2",
@@ -179,7 +179,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Morgan-2 density fingerprint",
-            "citations": "",
+            "citations": "doi:10.1021/ci100050t",
         },
         "FpDensityMorgan3": {
             "name": "fp_density_morgan3",
@@ -187,7 +187,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Morgan-3 density fingerprint",
-            "citations": "",
+            "citations": "doi:10.1021/ci100050t",
         },
         "BCUT2D_MWHI": {
             "name": "bcut2d_mwhi",
@@ -195,7 +195,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "",
-            "citations": "",
+            "citations": "Pearlman_1997",
         },
         "BCUT2D_MWLOW": {
             "name": "bcut2d_mwlow",
@@ -203,7 +203,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "",
-            "citations": "",
+            "citations": "Pearlman_1997",
         },
         "BCUT2D_CHGHI": {
             "name": "bcut2d_chghi",
@@ -211,7 +211,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "",
-            "citations": "",
+            "citations": "Pearlman_1997",
         },
         "BCUT2D_CHGLO": {
             "name": "bcut2d_chglo",
@@ -219,7 +219,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "",
-            "citations": "",
+            "citations": "Pearlman_1997",
         },
         "BCUT2D_LOGPHI": {
             "name": "bcut2d_logphi",
@@ -227,7 +227,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "",
-            "citations": "",
+            "citations": "Pearlman_1997",
         },
         "BCUT2D_LOGPLOW": {
             "name": "bcut2d_logplow",
@@ -235,7 +235,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "",
-            "citations": "",
+            "citations": "Pearlman_1997",
         },
         "BCUT2D_MRHI": {
             "name": "bcut2d_mrhi",
@@ -243,7 +243,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "",
-            "citations": "",
+            "citations": "Pearlman_1997",
         },
         "BCUT2D_MRLOW": {
             "name": "bcut2d_mrlow",
@@ -251,7 +251,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "",
-            "citations": "",
+            "citations": "Pearlman_1997",
         },
         "BalabanJ": {
             "name": "balaban_j",
@@ -259,7 +259,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Balaban's J value for a molecule",
-            "citations": "",
+            "citations": "BALABAN1982399",
         },
         "BertzCT": {
             "name": "bertz_ct",
@@ -267,7 +267,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Topological complexity index of a molecule",
-            "citations": "",
+            "citations": "doi:10.1021/ja00402a071",
         },
         "Chi0": {
             "name": "chi0",
@@ -275,7 +275,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Chi-0 graph descriptor",
-            "citations": "",
+            "citations": "doi:https://doi.org/10.1002/9780470125793.ch9",
         },
         "Chi0n": {
             "name": "chi0n",
@@ -283,7 +283,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Chi-0n graph descriptor",
-            "citations": "",
+            "citations": "doi:https://doi.org/10.1002/9780470125793.ch9",
         },
         "Chi0v": {
             "name": "chi0v",
@@ -291,7 +291,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Chi-0v graph descriptor",
-            "citations": "",
+            "citations": "doi:https://doi.org/10.1002/9780470125793.ch9",
         },
         "Chi1": {
             "name": "chi1",
@@ -299,7 +299,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Chi-1 graph descriptor",
-            "citations": "",
+            "citations": "doi:https://doi.org/10.1002/9780470125793.ch9",
         },
         "Chi1n": {
             "name": "chi1n",
@@ -307,7 +307,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Chi-1n graph descriptor",
-            "citations": "",
+            "citations": "doi:https://doi.org/10.1002/9780470125793.ch9",
         },
         "Chi1v": {
             "name": "chi1v",
@@ -315,7 +315,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Chi-1v graph descriptor",
-            "citations": "",
+            "citations": "doi:https://doi.org/10.1002/9780470125793.ch9",
         },
         "Chi2n": {
             "name": "chi2n",
@@ -323,7 +323,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Chi-2n graph descriptor",
-            "citations": "",
+            "citations": "doi:https://doi.org/10.1002/9780470125793.ch9",
         },
         "Chi2v": {
             "name": "chi2v",
@@ -331,7 +331,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Chi-2v graph descriptor",
-            "citations": "",
+            "citations": "doi:https://doi.org/10.1002/9780470125793.ch9",
         },
         "Chi3n": {
             "name": "chi3n",
@@ -339,7 +339,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Chi-3n graph descriptor",
-            "citations": "",
+            "citations": "doi:https://doi.org/10.1002/9780470125793.ch9",
         },
         "Chi3v": {
             "name": "chi3v",
@@ -347,7 +347,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Chi-3v graph descriptor",
-            "citations": "",
+            "citations": "doi:https://doi.org/10.1002/9780470125793.ch9",
         },
         "Chi4n": {
             "name": "chi4n",
@@ -355,7 +355,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Chi-4n graph descriptor",
-            "citations": "",
+            "citations": "doi:https://doi.org/10.1002/9780470125793.ch9",
         },
         "Chi4v": {
             "name": "chi4v",
@@ -363,7 +363,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "Chi-4v graph descriptor",
-            "citations": "",
+            "citations": "doi:https://doi.org/10.1002/9780470125793.ch9",
         },
         "HallKierAlpha": {
             "name": "hall_kier_alpha",
@@ -371,7 +371,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "",
-            "citations": "",
+            "citations": "doi:https://doi.org/10.1002/9780470125793.ch9",
         },
         "Ipc": {
             "name": "ipc",
@@ -383,7 +383,7 @@ properties = {
                 "characteristicpolynomial of the adjacency matrix of a "
                 "hydrogen-suppressed graph of a molecule"
             ),
-            "citations": "",
+            "citations": "doi:10.1063/1.434593",
         },
         "Kappa1": {
             "name": "kappa1",
@@ -391,7 +391,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "",
-            "citations": "",
+            "citations": "doi:https://doi.org/10.1002/9780470125793.ch9",
         },
         "Kappa2": {
             "name": "kappa2",
@@ -399,7 +399,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "",
-            "citations": "",
+            "citations": "doi:https://doi.org/10.1002/9780470125793.ch9",
         },
         "Kappa3": {
             "name": "kappa3",
@@ -407,7 +407,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "",
-            "citations": "",
+            "citations": "doi:https://doi.org/10.1002/9780470125793.ch9",
         },
         "LabuteASA": {
             "name": "labute_asa",
@@ -415,7 +415,7 @@ properties = {
             "type": "float",
             "units": "",
             "description": "",
-            "citations": "",
+            "citations": "LABUTE2000464",
         },
         "PEOE_VSA1": {
             "name": "peoe_vsa1",
