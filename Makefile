@@ -1,5 +1,4 @@
 MODULE := rdkit_step
-.PHONY: clean clean-test clean-pyc clean-build docs help
 .DEFAULT_GOAL := help
 define BROWSER_PYSCRIPT
 import os, webbrowser, sys
@@ -24,12 +23,15 @@ endef
 export PRINT_HELP_PYSCRIPT
 BROWSER := python -c "$$BROWSER_PYSCRIPT"
 
+.PHONY: help
 help:
 	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
 
+.PHONY: clean
 clean: clean-build clean-pyc clean-test ## remove all build, test, coverage and Python artifacts
 
 
+.PHONY: clean-build
 clean-build: ## remove build artifacts
 	rm -fr build/
 	rm -fr dist/
@@ -37,44 +39,41 @@ clean-build: ## remove build artifacts
 	find . -name '*.egg-info' -exec rm -fr {} +
 	find . -name '*.egg' -exec rm -f {} +
 
+.PHONY: clean-pyc
 clean-pyc: ## remove Python file artifacts
 	find . -name '*.pyc' -exec rm -f {} +
 	find . -name '*.pyo' -exec rm -f {} +
 	find . -name '*~' -exec rm -f {} +
 	find . -name '__pycache__' -exec rm -fr {} +
 
+.PHONY: clean-test
 clean-test: ## remove test and coverage artifacts
 	rm -fr .tox/
 	rm -f .coverage
 	rm -fr htmlcov/
 	find . -name '.pytype' -exec rm -fr {} +
 
+.PHONY: lint
 lint: ## check style with flake8
 	black --check --diff $(MODULE) tests
 	flake8 $(MODULE) tests
 
+.PHONY: format
 format: ## reformat with with yapf and isort
 	black $(MODULE) tests
 
-typing: ## check typing
-	pytype $(MODULE)
-
+.PHONY: test
 test: ## run tests quickly with the default Python
 	py.test
 
-dependencies:
-	pur -r requirements_dev.txt
-	pip install -r requirements_dev.txt
-
-test-all: ## run tests on every Python version with tox
-	tox
-
+.PHONY: converage
 coverage: ## check code coverage quickly with the default Python
 	coverage run --source $(MODULE) -m pytest
 	coverage report -m
 	coverage html
 	$(BROWSER) htmlcov/index.html
 
+.PHONY: docs
 docs: ## generate Sphinx HTML documentation, including API docs
 	rm -f docs/$(MODULE).rst
 	rm -f docs/modules.rst
@@ -83,24 +82,27 @@ docs: ## generate Sphinx HTML documentation, including API docs
 	$(MAKE) -C docs html
 	$(BROWSER) docs/_build/html/index.html
 
+.PHONY: servedocs
 servedocs: docs ## compile the docs watching for changes
 	watchmedo shell-command -p '*.rst' -c '$(MAKE) -C docs html' -R -D .
 
-release: clean ## package and upload a release
-	python setup.py sdist bdist_wheel
+.PHONY: release
+release: dist ## package and upload a release
 	python -m twine upload dist/*
 
-check-release: clean ## check the release for errors
-	python setup.py sdist bdist_wheel
+.PHONY: check-release
+check-release: dist ## check the release for errors
 	python -m twine check dist/*
 
+.PHONY: dist
 dist: clean ## builds source and wheel package
-	python setup.py sdist
-	python setup.py bdist_wheel
+	python -m build
 	ls -l dist
 
+.PHONY: install
 install: uninstall ## install the package to the active Python's site-packages
-	python setup.py install
+	pip install .
 
+.PHONY: uninstall
 uninstall: clean ## uninstall the package
 	pip uninstall --yes $(MODULE)
