@@ -1,0 +1,53 @@
+rdkit\_step package
+===================
+
+Submodules
+----------
+
+rdkit\_step.metadata module
+---------------------------
+
+.. automodule:: rdkit_step.metadata
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+rdkit\_step.rdkit module
+------------------------
+
+.. automodule:: rdkit_step.rdkit
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+rdkit\_step.rdkit\_parameters module
+------------------------------------
+
+.. automodule:: rdkit_step.rdkit_parameters
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+rdkit\_step.rdkit\_step module
+------------------------------
+
+.. automodule:: rdkit_step.rdkit_step
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+rdkit\_step.tk\_rdkit module
+----------------------------
+
+.. automodule:: rdkit_step.tk_rdkit
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: rdkit_step
+   :members:
+   :undoc-members:
+   :show-inheritance:
