@@ -157,14 +157,7 @@ class Rdkit(seamm.Node):
         # Print what we are doing
         printer.important(__(self.description_text(P), indent=self.indent))
 
-        # Add the rdkit_step principal reference
-        self.references.cite(
-            raw=self._bibliography["rdkit_step"],
-            alias="rdkit_step",
-            module="rdkit_step",
-            level=1,
-            note="Principal reference for the rdkit_step module",
-        )
+        # And add the citations for the features used.
         references = set()
         mol = configuration.to_RDKMol()
 
