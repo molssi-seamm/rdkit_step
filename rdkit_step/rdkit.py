@@ -171,10 +171,10 @@ class Rdkit(seamm.Node):
         for feature in self.parameters["features"].value:
             if feature in Descriptors.__dict__:
                 # Add the feature citation(s)
-                citation_id = metadata.properties["2D-Descriptors"][feature][
+                for citation_id in metadata.properties["2D-Descriptors"][feature][
                     "citations"
-                ]
-                references.add(citation_id)
+                ]:
+                    references.add(citation_id)
                 value = Descriptors.__dict__[feature](mol)
                 if in_table:
                     if feature not in table.columns:
@@ -191,10 +191,10 @@ class Rdkit(seamm.Node):
                     properties.put(key, value)
             elif feature in Descriptors3D.__dict__:
                 # Add the feature citation(s)
-                citation_id = metadata.properties["3D-Descriptors"][feature][
+                for citation_id in metadata.properties["3D-Descriptors"][feature][
                     "citations"
-                ]
-                references.add(citation_id)
+                ]:
+                    references.add(citation_id)
                 value = Descriptors3D.__dict__[feature](mol)
                 if in_table:
                     if feature not in table.columns:
@@ -213,15 +213,17 @@ class Rdkit(seamm.Node):
                 print(f"     unable to handle feature '{feature}'")
 
         # Add the references
-        print(references)
         for reference in references:
-            self.references.cite(
-                raw=self._bibliography[reference],
-                alias=reference,
-                module="rdkit_step",
-                level=2,
-                note="RDKit feature citation",
-            )
+            if reference in self._bibliography:
+                self.references.cite(
+                    raw=self._bibliography[reference],
+                    alias=reference,
+                    module="rdkit_step",
+                    level=2,
+                    note="RDKit feature citation",
+                )
+            else:
+                self.logger.warning(f"Could not find reference '{reference}'")
 
         return next_node
 
