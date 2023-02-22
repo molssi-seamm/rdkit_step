@@ -1,7 +1,0 @@
-rdkit_step
-==========
-
-.. toctree::
-   :maxdepth: 4
-
-   rdkit_step
