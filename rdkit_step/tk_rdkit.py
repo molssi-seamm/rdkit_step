@@ -3,21 +3,18 @@
 """The graphical part of a RDKit step"""
 
 import pprint  # noqa: F401
-import tkinter as tk
-import tkinter.ttk as ttk
 
 import rdkit_step  # noqa: F401
 import seamm
 from seamm_util import ureg, Q_, units_class  # noqa: F401
 import seamm_widgets as sw
-import Pmw
 
 
 class TkRdkit(seamm.TkNode):
     """
     The graphical part of a RDKit step in a flowchart.
 
-    Attributes
+    Paramaters
     ----------
     tk_flowchart : TkFlowchart = None
         The flowchart that we belong to.
@@ -127,18 +124,17 @@ class TkRdkit(seamm.TkNode):
 
         self.logger.debug("Creating the dialog")
 
-        self.dialog = Pmw.Dialog(
-            self.toplevel,
-            buttons=("OK", "Reset", "Clear", "Cancel"),
-            master=self.toplevel,
-            title=title,
-            command=self.handle_dialog,
-        )
-        self.dialog.withdraw()
+        frame = super().create_dialog(title="Edit RDKit features")
 
-        frame = ttk.Frame(self.dialog.interior())
-        frame.pack(expand=tk.YES, fill=tk.BOTH)
-        self["frame"] = frame
+        # make it large!
+        screen_w = self.dialog.winfo_screenwidth()
+        screen_h = self.dialog.winfo_screenheight()
+        w = int(0.9 * screen_w)
+        h = int(0.8 * screen_h)
+        x = int(0.05 * screen_w / 2)
+        y = int(0.1 * screen_h / 2)
+
+        self.dialog.geometry("{}x{}+{}+{}".format(w, h, x, y))
 
         # Create all the widgets
         P = self.node.parameters
