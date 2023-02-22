@@ -23,7 +23,7 @@ class RdkitParameters(seamm.Parameters):
 
     Parameters
     ----------
-    parameters : 
+    parameters :
         A dictionary containing the parameters for the current step.
         Each key of the dictionary is a dictionary that contains the
         the following keys: kind, default, default_units, enumeration,
