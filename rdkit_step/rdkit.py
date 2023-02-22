@@ -40,7 +40,7 @@ class Rdkit(seamm.Node):
     """
     The non-graphical part of a RDKit step in a flowchart.
 
-    Attributes
+    Parmaeters
     ----------
     parser : configargparse.ArgParser
         The parser object.

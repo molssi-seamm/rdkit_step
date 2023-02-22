@@ -1,5 +1,9 @@
 MODULE := rdkit_step
+.PHONY: help clean clean-build clean-docs clean-pyc clean-test lint format typing test
+.PHONY: dependencies test-all coverage html docs servedocs release check-release
+.PHONY: dist install uninstall
 .DEFAULT_GOAL := help
+
 define BROWSER_PYSCRIPT
 import os, webbrowser, sys
 try:
@@ -9,6 +13,7 @@ except:
 
 webbrowser.open("file://" + pathname2url(os.path.abspath(sys.argv[1])))
 endef
+
 export BROWSER_PYSCRIPT
 
 define PRINT_HELP_PYSCRIPT
@@ -20,18 +25,17 @@ for line in sys.stdin:
 		target, help = match.groups()
 		print("%-20s %s" % (target, help))
 endef
+
 export PRINT_HELP_PYSCRIPT
+
 BROWSER := python -c "$$BROWSER_PYSCRIPT"
 
-.PHONY: help
 help:
 	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
 
-.PHONY: clean
 clean: clean-build clean-pyc clean-test ## remove all build, test, coverage and Python artifacts
 
 
-.PHONY: clean-build
 clean-build: ## remove build artifacts
 	rm -fr build/
 	rm -fr dist/
@@ -39,70 +43,64 @@ clean-build: ## remove build artifacts
 	find . -name '*.egg-info' -exec rm -fr {} +
 	find . -name '*.egg' -exec rm -f {} +
 
-.PHONY: clean-pyc
 clean-pyc: ## remove Python file artifacts
 	find . -name '*.pyc' -exec rm -f {} +
 	find . -name '*.pyo' -exec rm -f {} +
 	find . -name '*~' -exec rm -f {} +
 	find . -name '__pycache__' -exec rm -fr {} +
 
-.PHONY: clean-test
 clean-test: ## remove test and coverage artifacts
 	rm -fr .tox/
 	rm -f .coverage
 	rm -fr htmlcov/
 	find . -name '.pytype' -exec rm -fr {} +
 
-.PHONY: lint
-lint: ## check style with flake8
-	black --check --diff $(MODULE) tests
-	flake8 $(MODULE) tests
+lint: ## check style with black and flake8
+	black --extend-exclude '_version.py' --check --diff $(MODULE) tests
+	flake8 --color never $(MODULE) tests
 
-.PHONY: format
 format: ## reformat with with yapf and isort
-	black $(MODULE) tests
+	black --extend-exclude '_version.py' $(MODULE) tests
 
-.PHONY: test
 test: ## run tests quickly with the default Python
-	py.test
+	pytest tests/
 
-.PHONY: converage
 coverage: ## check code coverage quickly with the default Python
-	coverage run --source $(MODULE) -m pytest
-	coverage report -m
-	coverage html
+	pytest -v --cov=$(MODULE) --cov-report term --color=yes tests/
+
+coverage-html: ## check code coverage quickly with the default Python, showing as html
+	pytest -v --cov=$(MODULE) --cov-report=html:htmlcov --cov-report term --color=yes tests/
 	$(BROWSER) htmlcov/index.html
 
-.PHONY: docs
-docs: ## generate Sphinx HTML documentation, including API docs
-	rm -f docs/$(MODULE).rst
-	rm -f docs/modules.rst
-	sphinx-apidoc -o docs/ $(MODULE)
+clean-docs: ## remove files associated with building the docs
+	rm -f docs/api/$(MODULE).rst
+	rm -f docs/api/modules.rst
 	$(MAKE) -C docs clean
+
+html: clean-docs ## generate Sphinx HTML documentation, including API docs
+	sphinx-apidoc -o docs/api $(MODULE)
 	$(MAKE) -C docs html
+	rm -f docs/api/$(MODULE).rst
+	rm -f docs/api/modules.rst
+
+docs: html ## Make the html docs and show in the browser
 	$(BROWSER) docs/_build/html/index.html
 
-.PHONY: servedocs
 servedocs: docs ## compile the docs watching for changes
 	watchmedo shell-command -p '*.rst' -c '$(MAKE) -C docs html' -R -D .
 
-.PHONY: release
 release: dist ## package and upload a release
 	python -m twine upload dist/*
 
-.PHONY: check-release
 check-release: dist ## check the release for errors
 	python -m twine check dist/*
 
-.PHONY: dist
 dist: clean ## builds source and wheel package
 	python -m build
 	ls -l dist
 
-.PHONY: install
 install: uninstall ## install the package to the active Python's site-packages
 	pip install .
 
-.PHONY: uninstall
 uninstall: clean ## uninstall the package
 	pip uninstall --yes $(MODULE)
